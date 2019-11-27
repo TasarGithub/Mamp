@@ -423,7 +423,23 @@ window.addEventListener('DOMContentLoaded', function () {
     });
 
   };
-  calc();
+  calc(100);
+
+  // send-ajax-form
+  const sendForm = () => {
+    const errorMessage = 'Что то не так ',
+      loadMessage = 'Загрузка',
+      succesMessage = 'Спасибо ! Скоро ссвяжемся  с вами';
+    const form = document.getElementById('form1');
+    const statusMessage =  document.createElement('div');
+    statusMessage.textContent = 'Тут будет сообщение';
+    statusMessage.style.cssText = 'font-size: 2rem;';
+    form.appendChild(statusMessage);
+
+
+
+  };
+  sendForm();
 
 });
 
