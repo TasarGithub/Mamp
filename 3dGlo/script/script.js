@@ -107,6 +107,7 @@ window.addEventListener('DOMContentLoaded', function () {
       popUpContent.style.opacity = 0;
     popUpBtn.forEach((elem) => {
       elem.addEventListener('click', () => {
+        console.log(111);
         popUp.style.display = 'block';
         //popUpContent.style.position = 'relative';
        flyInterval = requestAnimationFrame(flyAnimate);
@@ -146,6 +147,7 @@ window.addEventListener('DOMContentLoaded', function () {
             cancelAnimationFrame(flyInterval);
           }
     }; 
+    
     
   };
 
@@ -411,7 +413,6 @@ window.addEventListener('DOMContentLoaded', function () {
         flyAmount();
       } 
       console.log('total: ', total);
-      
     };
     
     calcBlock.addEventListener('change', (event) => {
@@ -432,17 +433,180 @@ window.addEventListener('DOMContentLoaded', function () {
       succesMessage = 'Спасибо ! Скоро ссвяжемся  с вами';
     const form = document.getElementById('form1');
     const statusMessage =  document.createElement('div');
-    statusMessage.textContent = 'Тут будет сообщение';
+    //statusMessage.textContent = 'Тут будет сообщение'; долж
     statusMessage.style.cssText = 'font-size: 2rem;';
-    //form.appendChild(statusMessage);
+    statusMessage.textContent = loadMessage;
     form.addEventListener('submit', (event) => {
       event.preventDefault();
+      form.appendChild(statusMessage);
+      let body = {};
+
+      // for (let val of formData.entries()){
+      //   body[val[0]] = val[1];
+      // }
+      const formData =  new FormData(form);
+      formData.forEach((val, key) => {
+        body[key] = val;
+      });
+      
+      postData(body, () => {
+        statusMessage.textContent = succesMessage;
+      }, (error) => {
+        statusMessage.textContent = errorMessage;
+        console.error(error);
+      });
+
     });
-
-
+    const postData = (body, outputData, error) => {
+      const request = new XMLHttpRequest();
+      request.addEventListener('readystatechange', () => {
+        
+        if (request.readyState !== 4) {
+          return;
+        }
+        if (request.status === 200) {
+          statusMessage.textContent = succesMessage;
+        } else {
+          error(request.status);
+        }
+      });
+      request.open('POST', './server.php');
+      request.setRequestHeader('Content-Type', 'application/json');
+      //request.send(formData);
+      request.send(JSON.stringify(body));
+    };
 
   };
   sendForm();
+
+  // send-ajax-popUp
+  const sendFormPopUp = () => {
+    const errorMessage = 'Что то не так ',
+      loadMessage = 'Загрузка',
+      succesMessage = 'Спасибо ! Скоро ссвяжемся  с вами';
+    const form = document.getElementById('form3');
+    const statusMessage =  document.createElement('div');
+    //statusMessage.textContent = 'Тут будет сообщение'; долж
+    statusMessage.style.cssText = 'font-size: 2rem;';
+    statusMessage.textContent = loadMessage;
+    let count = 1;
+  
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      form.appendChild(statusMessage);
+      let body = {};
+      
+      flyAnimate();
+      // for (let val of formData.entries()){
+      //   body[val[0]] = val[1];
+      // }
+      const formData =  new FormData(form);
+      formData.forEach((val, key) => {
+        body[key] = val;
+      });
+      
+      postData(body, () => {
+        statusMessage.textContent = succesMessage;
+      }, (error) => {
+        statusMessage.textContent = errorMessage;
+        console.error(error);
+      });
+
+    });
+    const postData = (body, outputData, error) => {
+      const request = new XMLHttpRequest();
+      request.addEventListener('readystatechange', () => {
+        
+        if (request.readyState !== 4) {
+          return;
+        }
+        if (request.status === 200) {
+          outputData();
+        } else {
+          error(request.status);
+        }
+      });
+      request.open('POST', './server.php');
+      request.setRequestHeader('Content-Type', 'application/json');
+      //request.send(formData);
+      
+      request.send(JSON.stringify(body));
+      console.log(body);
+    };
+  
+    let flyAnimate = () => {
+      //debugger;
+      
+      const flyInterval = requestAnimationFrame(flyAnimate);
+      count = count - 0.01;
+
+      if (form.style.opacity >= 0) {
+        form.style.opacity = count; 
+        } else {
+          cancelAnimationFrame(flyInterval);
+        }
+    }; 
+  
+  
+
+};
+sendFormPopUp();    
+
+// send-ajax-form2-connect
+const sendFormConnect = () => {
+  const errorMessage = 'Что то не так ',
+    loadMessage = 'Загрузка',
+    succesMessage = 'Спасибо ! Скоро ссвяжемся  с вами';
+  const form = document.getElementById('form2');
+  //const statusMessage =  document.createElement('div');
+  //statusMessage.textContent = 'Тут будет сообщение'; долж
+  //statusMessage.style.cssText = 'font-size: 2rem;';
+  //statusMessage.textContent = loadMessage;
+  let count = 1;
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    //form.appendChild(statusMessage);
+    let body = {};
+    
+    flyAnimate();
+    // for (let val of formData.entries()){
+    //   body[val[0]] = val[1];
+    // }
+    const formData =  new FormData(form);
+    formData.forEach((val, key) => {
+      body[key] = val;
+    });
+    
+    postData(body, () => {
+      //statusMessage.textContent = succesMessage;
+    }, (error) => {
+      //statusMessage.textContent = errorMessage;
+      console.error(error);
+    });
+
+  });
+  const postData = (body, outputData, error) => {
+    const request = new XMLHttpRequest();
+    request.addEventListener('readystatechange', () => {
+      
+      if (request.readyState !== 4) {
+        return;
+      }
+      if (request.status === 200) {
+        outputData();
+       } else {
+        error(request.status);
+      }
+    });
+    request.open('POST', './server.php');
+    request.setRequestHeader('Content-Type', 'application/json');
+    request.send(JSON.stringify(body));
+    console.log(body);
+  };
+
+ 
+};
+sendFormConnect();
 
 });
 
