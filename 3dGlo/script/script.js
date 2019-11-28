@@ -434,7 +434,10 @@ window.addEventListener('DOMContentLoaded', function () {
     const statusMessage =  document.createElement('div');
     statusMessage.textContent = 'Тут будет сообщение';
     statusMessage.style.cssText = 'font-size: 2rem;';
-    form.appendChild(statusMessage);
+    //form.appendChild(statusMessage);
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+    });
 
 
 
