@@ -431,60 +431,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 
-
   // send-ajax-form
-  const sendFormOld = () => {
-    const errorMessage = 'Что то не так ',
-      loadMessage = 'Загрузка',
-      succesMessage = 'Спасибо ! Скоро ссвяжемся  с вами';
-    const form = document.getElementById('form1');
-    const statusMessage =  document.createElement('div');
-    //statusMessage.textContent = 'Тут будет сообщение'; долж
-    statusMessage.style.cssText = 'font-size: 2rem;';
-    statusMessage.textContent = loadMessage;
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      form.appendChild(statusMessage);
-      let body = {};
-
-      // for (let val of formData.entries()){
-      //   body[val[0]] = val[1];
-      // }
-      const formData =  new FormData(form);
-      formData.forEach((val, key) => {
-        body[key] = val;
-      });
-      
-      postData(body, () => {
-        statusMessage.textContent = succesMessage;
-      }, (error) => {
-        statusMessage.textContent = errorMessage;
-        console.error(error);
-      });
-
-    });
-    const postData = (body, outputData, error) => {
-      const request = new XMLHttpRequest();
-      request.addEventListener('readystatechange', () => {
-        
-        if (request.readyState !== 4) {
-          return;
-        }
-        if (request.status === 200) {
-          statusMessage.textContent = succesMessage;
-        } else {
-          error(request.status);
-        }
-      });
-      request.open('POST', './server.php');
-      request.setRequestHeader('Content-Type', 'application/json');
-      //request.send(formData);
-      request.send(JSON.stringify(body));
-    };
-
-  };
-  //sendFormOld();
-    // send-ajax-form
   
   //+++++++++++++++++++++++++
   const formSendAll = (form) => {
@@ -518,16 +465,6 @@ window.addEventListener('DOMContentLoaded', function () {
     request.send(JSON.stringify(body));
   };
     
-const createElem = () => {
-  const errorMessage = 'Что то не так ',
-      loadMessage = 'Загрузка',
-      succesMessage = 'Спасибо ! Скоро свяжемся  с вами';
-
-    const statusMessage =  document.createElement('div');
-    statusMessage.style.cssText = 'font-size: 2rem;';
-    statusMessage.textContent = loadMessage;
-    return statusMessage;
-};
 
   const sendForm = () => {
     
