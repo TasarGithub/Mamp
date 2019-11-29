@@ -26,6 +26,7 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   });
 };
+
 validation();
 
 
@@ -51,8 +52,8 @@ validation();
     };
     
     const declOfNum = (n, titles)  => {
-      return titles[(n % 10 === 1 && n % 100 !== 11) ?
-         0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 1 : 2]};
+      return titles[(n % 10 === 1 && n % 100 !== 11) ? 0 :  (((n % 10 >= 2 && n % 10 <= 4) && (n % 100 < 10 || n % 100 >= 20)) ? 1 : 2)]
+        };
 
     const updateClock = () => {
       const timer = getTimeRemanining();
@@ -487,7 +488,7 @@ validation();
     form.querySelectorAll('input').forEach(item => item.value = '');
   };
   
-  const postData = (body, outputData, error) => {
+  const postData = (body,  outputData, waitData, error) => {
     const request = new XMLHttpRequest();
     request.addEventListener('readystatechange', () => {
       
@@ -507,35 +508,53 @@ validation();
   };
     
   // send-ajax-form1
-  const sendForm = () => {
-    const form = document.getElementById('form1');
-    
-    const errorMessage = 'Что то не так ',
-    loadMessage = 'Загрузка',
-    succesMessage = 'Спасибо ! Скоро свяжемся  с вами';
-
+  const creatDivMessage = () => {
+    const objMessage = {
+      errorMessage: 'Что то не так ',
+      loadMessage: 'Загрузка',
+      succesMessage:  'Спасибо ! Скоро свяжемся с вами',
+    };
     const statusMessage =  document.createElement('div');
-    statusMessage.style.cssText = 'font-size: 2rem;';
-    statusMessage.textContent = loadMessage;
+    statusMessage.classList.add('status-message');
+    statusMessage.style.cssText = 'font-size: 2rem; color: #fff;'; 
+    statusMessage.textContent = objMessage.loadMessage;
+    objMessage.div = statusMessage;
+    return objMessage;
+  };
+
+  const sendForm = (formArgument) => {
+    const form = document.getElementById(formArgument);
+    const objMessage = creatDivMessage();
 
     //debugger;
     form.addEventListener('submit', (event) => {
      event.preventDefault();
-     form.appendChild(statusMessage);
+     console.log('objMessage: ', objMessage);
+     form.appendChild(objMessage.div);
+     
 
       postData(formSendAll(form), () => {
-        statusMessage.textContent = succesMessage;
-        console.log('succesMessage: ', succesMessage);
+        objMessage.div.textContent = objMessage.succesMessage;
+        console.log('succesMessage: ', objMessage.succesMessage);
         formClear(form);
-
-      }, (error) => {
-        statusMessage.textContent = errorMessage;
-        console.log('errorMessage: ', errorMessage);
-        console.error(error);
+        const tempDiv = form.querySelector('.status-message');
+        setTimeout(() => { if (!!tempDiv) {
+           tempDiv.parentNode.removeChild(tempDiv);}
+          },3000);
+      },() =>{
+        objMessage.div.textContent = objMessage.loadMessage;
+        console.log('succesMessage: ', objMessage.loadMessage);
+      },
+        (error) => {
+         statusMessage.textContent = objMessage.errorMessage;
+         console.log('errorMessage: ', objMessage.errorMessage);
+         console.error(error);
       });
     });
   };
-  sendForm();
+  sendForm('form1');
+
+  sendForm('form2');
 
   // send-ajax-popUpform
   const sendFormPopUp = () => {
@@ -543,13 +562,7 @@ validation();
      form = document.getElementById('form3'),
      popUpContent = document.querySelector('.popup-content');
 
-    const errorMessage = 'Что то не так ',
-    loadMessage = 'Загрузка',
-    succesMessage = 'Спасибо ! Скоро свяжемся с вами';
 
-    const statusMessage =  document.createElement('div');
-    statusMessage.classList.add('status-message');
-    statusMessage.style.cssText = 'font-size: 2rem; color: #fff;'; 
     statusMessage.textContent = loadMessage;
 
     let count = 1;
@@ -566,8 +579,9 @@ validation();
           const tempDiv = popUpContent.querySelector('.status-message');
           if (!!tempDiv) {
             tempDiv.parentNode.removeChild(tempDiv);
-          };
+          }
           cancelAnimationFrame(flyInterval);
+          count = 0;
 
         }
     };
@@ -590,20 +604,13 @@ validation();
       });
     });
   };
-  sendFormPopUp(); 
+ // sendFormPopUp(); 
 
   // send-ajax-form2-connect
   const sendFormConnect = () => {
     const form = document.getElementById('form2');
+    const objMessage = creatDivMessage();
 
-    const errorMessage = 'Что то не так ',
-      loadMessage = 'Загрузка',
-      succesMessage = 'Спасибо ! Скоро свяжемся  с вами';
-    
-    const statusMessage =  document.createElement('div');
-    statusMessage.style.cssText = 'font-size: 2rem;';
-    statusMessage.textContent = loadMessage;
-    
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       form.appendChild(statusMessage);
@@ -611,6 +618,10 @@ validation();
       postData(formSendAll(form), () => {
         statusMessage.textContent = succesMessage;
         formClear(form);
+        const tempDiv = form.querySelector('.status-message');
+        if (!!tempDiv) {
+          tempDiv.parentNode.removeChild(tempDiv);
+        }
       }, (error) => {
         statusMessage.textContent = errorMessage;
         console.error(error);
@@ -618,6 +629,6 @@ validation();
 
     });
   };
-  sendFormConnect();
+ // sendFormConnect();
 
 });
