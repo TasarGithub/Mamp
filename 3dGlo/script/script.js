@@ -3,9 +3,11 @@ window.addEventListener('DOMContentLoaded', function () {
 
  // validation
  const validation = () => {
-  const inputName =  document.querySelectorAll('input[placeholder="Ваше имя"]'),
-        inputMessage =  document.querySelectorAll('input[placeholder="Ваше сообщение"]'),
-        inputTelephone = document.querySelectorAll('input[placeholder="Номер телефона"]');
+  const inputName =  document.querySelectorAll('.form-name'),
+        inputEmail =  document.querySelectorAll('.form-email'),
+        inputMessage =  document.querySelectorAll('.mess'), 
+        inputTelephone = document.querySelectorAll('.form-phone');
+      
 
   inputName.forEach(item => {
     item.addEventListener('input',() => {
@@ -13,6 +15,12 @@ window.addEventListener('DOMContentLoaded', function () {
       item.value = item.value.replace(/[^а-яё\s]/gi, '');
     });
   });     
+  inputEmail.forEach(item => {
+    item.addEventListener('input',() => {
+   //debugger;
+      item.value = item.value.replace(/[^a-z@-_\d]/gi, '');
+    });
+  });   
   inputMessage.forEach(item => {
     item.addEventListener('input',() => {
       //debugger;
@@ -25,6 +33,8 @@ window.addEventListener('DOMContentLoaded', function () {
       item.value = item.value.replace(/\D/g, '');
     });
   });
+
+
 };
 
 validation();
@@ -466,15 +476,6 @@ validation();
 
 
 
-
-
-
-
-  
-
- 
-
-
   const formSendAll = (form) => {
       let body = {}; 
       const formData =  new FormData(form);
@@ -493,6 +494,7 @@ validation();
     request.addEventListener('readystatechange', () => {
       
       if (request.readyState !== 4) {
+        waitData();
         return;
       }
       if (request.status === 200) {
