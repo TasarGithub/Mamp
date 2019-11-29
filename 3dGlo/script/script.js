@@ -426,8 +426,14 @@ window.addEventListener('DOMContentLoaded', function () {
   };
   calc(100);
 
+
+
+
+
+
+
   // send-ajax-form
-  const sendForm = () => {
+  const sendFormOld = () => {
     const errorMessage = 'Что то не так ',
       loadMessage = 'Загрузка',
       succesMessage = 'Спасибо ! Скоро ссвяжемся  с вами';
@@ -477,115 +483,22 @@ window.addEventListener('DOMContentLoaded', function () {
     };
 
   };
-  sendForm();
-
-  // send-ajax-popUp
-  const sendFormPopUp = () => {
-    const errorMessage = 'Что то не так ',
-      loadMessage = 'Загрузка',
-      succesMessage = 'Спасибо ! Скоро ссвяжемся  с вами';
-    const form = document.getElementById('form3');
-    const statusMessage =  document.createElement('div');
-    //statusMessage.textContent = 'Тут будет сообщение'; долж
-    statusMessage.style.cssText = 'font-size: 2rem;';
-    statusMessage.textContent = loadMessage;
-    let count = 1;
+  //sendFormOld();
+    // send-ajax-form
   
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      form.appendChild(statusMessage);
-      let body = {};
-      
-      flyAnimate();
-      // for (let val of formData.entries()){
-      //   body[val[0]] = val[1];
-      // }
+  //+++++++++++++++++++++++++
+  const formSendAll = (form) => {
+      let body = {}; 
       const formData =  new FormData(form);
       formData.forEach((val, key) => {
         body[key] = val;
       });
-      
-      postData(body, () => {
-        statusMessage.textContent = succesMessage;
-      }, (error) => {
-        statusMessage.textContent = errorMessage;
-        console.error(error);
-      });
-
-    });
-    const postData = (body, outputData, error) => {
-      const request = new XMLHttpRequest();
-      request.addEventListener('readystatechange', () => {
-        
-        if (request.readyState !== 4) {
-          return;
-        }
-        if (request.status === 200) {
-          outputData();
-        } else {
-          error(request.status);
-        }
-      });
-      request.open('POST', './server.php');
-      request.setRequestHeader('Content-Type', 'application/json');
-      //request.send(formData);
-      
-      request.send(JSON.stringify(body));
-      console.log(body);
-    };
+      return body;
+  };
+  const formClear = (form) => {
+    form.querySelectorAll('input').forEach(item => item.value = '');
+  };
   
-    let flyAnimate = () => {
-      //debugger;
-      
-      const flyInterval = requestAnimationFrame(flyAnimate);
-      count = count - 0.01;
-
-      if (form.style.opacity >= 0) {
-        form.style.opacity = count; 
-        } else {
-          cancelAnimationFrame(flyInterval);
-        }
-    }; 
-  
-  
-
-};
-sendFormPopUp();    
-
-// send-ajax-form2-connect
-const sendFormConnect = () => {
-  const errorMessage = 'Что то не так ',
-    loadMessage = 'Загрузка',
-    succesMessage = 'Спасибо ! Скоро ссвяжемся  с вами';
-  const form = document.getElementById('form2');
-  //const statusMessage =  document.createElement('div');
-  //statusMessage.textContent = 'Тут будет сообщение'; долж
-  //statusMessage.style.cssText = 'font-size: 2rem;';
-  //statusMessage.textContent = loadMessage;
-  let count = 1;
-
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    //form.appendChild(statusMessage);
-    let body = {};
-    
-    flyAnimate();
-    // for (let val of formData.entries()){
-    //   body[val[0]] = val[1];
-    // }
-    const formData =  new FormData(form);
-    formData.forEach((val, key) => {
-      body[key] = val;
-    });
-    
-    postData(body, () => {
-      //statusMessage.textContent = succesMessage;
-    }, (error) => {
-      //statusMessage.textContent = errorMessage;
-      console.error(error);
-    });
-
-  });
   const postData = (body, outputData, error) => {
     const request = new XMLHttpRequest();
     request.addEventListener('readystatechange', () => {
@@ -595,19 +508,160 @@ const sendFormConnect = () => {
       }
       if (request.status === 200) {
         outputData();
-       } else {
+      } else {
         error(request.status);
       }
     });
     request.open('POST', './server.php');
     request.setRequestHeader('Content-Type', 'application/json');
+    //request.send(formData);
     request.send(JSON.stringify(body));
-    console.log(body);
   };
+    
+const createElem = () => {
+  const errorMessage = 'Что то не так ',
+      loadMessage = 'Загрузка',
+      succesMessage = 'Спасибо ! Скоро свяжемся  с вами';
 
- 
+    const statusMessage =  document.createElement('div');
+    statusMessage.style.cssText = 'font-size: 2rem;';
+    statusMessage.textContent = loadMessage;
+    return statusMessage;
+};
+
+  const sendForm = () => {
+    
+    const form = document.getElementById('form1');
+    
+    const errorMessage = 'Что то не так ',
+    loadMessage = 'Загрузка',
+    succesMessage = 'Спасибо ! Скоро свяжемся  с вами';
+
+    const statusMessage =  document.createElement('div');
+    statusMessage.style.cssText = 'font-size: 2rem;';
+    statusMessage.textContent = loadMessage;
+
+    //debugger;
+    form.addEventListener('submit', (event) => {
+     event.preventDefault();
+     form.appendChild(statusMessage);
+
+      postData(formSendAll(form), () => {
+        statusMessage.textContent = succesMessage;
+        console.log('succesMessage: ', succesMessage);
+        formClear(form);
+
+      }, (error) => {
+        statusMessage.textContent = errorMessage;
+        console.log('errorMessage: ', errorMessage);
+        console.error(error);
+      });
+    });
+  };
+  sendForm();
+
+
+
+  // send-ajax-popUp
+  const sendFormPopUp = () => {
+    const form = document.getElementById('form3');
+    const mainForm = document.querySelector('.main-form');
+    const popUpContent = document.querySelector('.popup-content');
+
+    const errorMessage = 'Что то не так ',
+    loadMessage = 'Загрузка',
+    succesMessage = 'Спасибо ! Скоро свяжемся  с вами';
+
+    const statusMessage =  document.createElement('div');
+    statusMessage.style.cssText = 'font-size: 2rem;z-index: 10; opacity: 1;';
+    statusMessage.textContent = loadMessage;
+
+    let count = 1;
+    let flyAnimate = () => {
+      //debugger;
+      
+      const flyInterval = requestAnimationFrame(flyAnimate);
+      count = count - 0.01;
+
+      if (form.style.opacity >= 0) {
+        form.style.opacity = count; 
+        } else {
+        form.display = 'none'; 
+        cancelAnimationFrame(flyInterval);
+        }
+    };
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      popUpContent.appendChild(statusMessage);
+
+      postData(formSendAll(form), () => {
+        formClear(form);
+        flyAnimate();
+        statusMessage.textContent = succesMessage;
+        console.log('succesMessage: ', succesMessage);
+        
+      }, (error) => {
+        flyAnimate();
+        statusMessage.textContent = errorMessage;
+        console.log('errorMessage: ', errorMessage);
+        console.error(error);
+      });
+    
+    
+    });
+   
+
+};
+sendFormPopUp(); 
+//+++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+// send-ajax-form2-connect
+const sendFormConnect = () => {
+  const form = document.getElementById('form2');
+
+  const errorMessage = 'Что то не так ',
+    loadMessage = 'Загрузка',
+    succesMessage = 'Спасибо ! Скоро ссвяжемся  с вами';
+  
+
+  const statusMessage =  document.createElement('div');
+  statusMessage.style.cssText = 'font-size: 2rem;';
+  statusMessage.textContent = loadMessage;
+  
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    form.appendChild(statusMessage);
+    
+    postData(formSendAll(form), () => {
+      statusMessage.textContent = succesMessage;
+      formClear();
+    }, (error) => {
+      statusMessage.textContent = errorMessage;
+      console.error(error);
+    });
+
+  });
 };
 sendFormConnect();
 
 });
 
+// let count = 1;
+// let flyAnimate = () => {
+//   //debugger;
+  
+//   const flyInterval = requestAnimationFrame(flyAnimate);
+//   count = count - 0.01;
+
+//   if (form.style.opacity >= 0) {
+//     mainForm.style.opacity = count; 
+//     } else {
+//       cancelAnimationFrame(flyInterval);
+//     }
+// }; 
