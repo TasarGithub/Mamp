@@ -1,6 +1,34 @@
 window.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
+ // validation
+ const validation = () => {
+  const inputName =  document.querySelectorAll('input[placeholder="Ваше имя"]'),
+        inputMessage =  document.querySelectorAll('input[placeholder="Ваше сообщение"]'),
+        inputTelephone = document.querySelectorAll('input[placeholder="Номер телефона"]');
+
+  inputName.forEach(item => {
+    item.addEventListener('input',() => {
+      //debugger;
+      item.value = item.value.replace(/[^а-яё\s]/gi, '');
+    });
+  });     
+  inputMessage.forEach(item => {
+    item.addEventListener('input',() => {
+      //debugger;
+      item.value = item.value.replace(/[^а-яё\s]/gi, '');
+    });
+  });     
+  inputTelephone.forEach(item => {
+    item.addEventListener('input',() => {
+      //debugger;
+      item.value = item.value.replace(/\D/g, '');
+    });
+  });
+};
+validation();
+
+
   // таймер
   const countTimer = (deadLine) => {
 
@@ -108,9 +136,12 @@ window.addEventListener('DOMContentLoaded', function () {
     popUpBtn.forEach((elem) => {
       elem.addEventListener('click', () => {
         console.log(111);
+        
         popUp.style.display = 'block';
+        validation();
         //popUpContent.style.position = 'relative';
        flyInterval = requestAnimationFrame(flyAnimate);
+       
       });
     });
     const closePopUp = () => {
@@ -118,6 +149,12 @@ window.addEventListener('DOMContentLoaded', function () {
       //popUpContent.style.position = 'fixed';
       popUpContent.style.opacity = 0;
       count = 0.01;
+      
+      formClear(popUpContent);
+      const tempDiv = popUpContent.querySelector('.status-message');
+      if (!!tempDiv) {
+        tempDiv.parentNode.removeChild(tempDiv);
+      }
       cancelAnimationFrame(flyInterval);
     };
 
@@ -434,32 +471,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   
 
-  // validation
-  const validation = () => {
-    const inputName =  document.querySelectorAll('input[placeholder="Ваше имя"]'),
-          inputMessage =  document.querySelectorAll('input[placeholder="Ваше сообщение"]'),
-          inputTelephone = document.querySelectorAll('input[placeholder="Номер телефона"]');
-
-    inputName.forEach(item => {
-      item.addEventListener('input',() => {
-        //debugger;
-        item.value = item.value.replace(/[^а-яё\s]/gi, '');
-      });
-    });     
-    inputMessage.forEach(item => {
-      item.addEventListener('input',() => {
-        //debugger;
-        item.value = item.value.replace(/[^а-яё\s]/gi, '');
-      });
-    });     
-    inputTelephone.forEach(item => {
-      item.addEventListener('input',() => {
-        //debugger;
-        item.value = item.value.replace(/\D/g, '');
-      });
-    });
-  };
-  validation();
+ 
 
 
   const formSendAll = (form) => {
@@ -536,6 +548,7 @@ window.addEventListener('DOMContentLoaded', function () {
     succesMessage = 'Спасибо ! Скоро свяжемся с вами';
 
     const statusMessage =  document.createElement('div');
+    statusMessage.classList.add('status-message');
     statusMessage.style.cssText = 'font-size: 2rem; color: #fff;'; 
     statusMessage.textContent = loadMessage;
 
@@ -550,7 +563,12 @@ window.addEventListener('DOMContentLoaded', function () {
         popUpContent.style.opacity = count; 
         } else {
           popUp.style.display = 'none';
+          const tempDiv = popUpContent.querySelector('.status-message');
+          if (!!tempDiv) {
+            tempDiv.parentNode.removeChild(tempDiv);
+          };
           cancelAnimationFrame(flyInterval);
+
         }
     };
 
@@ -563,7 +581,7 @@ window.addEventListener('DOMContentLoaded', function () {
         flyAnimate();
         statusMessage.textContent = succesMessage;
         console.log('succesMessage: ', succesMessage);
-        
+      
       }, (error) => {
         flyAnimate();
         statusMessage.textContent = errorMessage;
@@ -580,7 +598,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     const errorMessage = 'Что то не так ',
       loadMessage = 'Загрузка',
-      succesMessage = 'Спасибо ! Скоро ссвяжемся  с вами';
+      succesMessage = 'Спасибо ! Скоро свяжемся  с вами';
     
     const statusMessage =  document.createElement('div');
     statusMessage.style.cssText = 'font-size: 2rem;';
