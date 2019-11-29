@@ -529,7 +529,6 @@ validation();
     //debugger;
     form.addEventListener('submit', (event) => {
      event.preventDefault();
-     console.log('objMessage: ', objMessage);
      form.appendChild(objMessage.div);
      
 
@@ -546,7 +545,7 @@ validation();
         console.log('succesMessage: ', objMessage.loadMessage);
       },
         (error) => {
-         statusMessage.textContent = objMessage.errorMessage;
+          objMessage.div.textContent = objMessage.errorMessage;
          console.log('errorMessage: ', objMessage.errorMessage);
          console.error(error);
       });
@@ -562,13 +561,9 @@ validation();
      form = document.getElementById('form3'),
      popUpContent = document.querySelector('.popup-content');
 
-
-    statusMessage.textContent = loadMessage;
-
     let count = 1;
     let flyAnimate = () => {
-      //debugger;
-      
+
       const flyInterval = requestAnimationFrame(flyAnimate);
       count = count - 0.01;
 
@@ -582,53 +577,32 @@ validation();
           }
           cancelAnimationFrame(flyInterval);
           count = 0;
-
         }
     };
 
     form.addEventListener('submit', (event) => {
       event.preventDefault();
-      form.appendChild(statusMessage);
+      const objMessage = creatDivMessage();
+      form.appendChild(objMessage.div);
 
       postData(formSendAll(form), () => {
         formClear(form);
         flyAnimate();
-        statusMessage.textContent = succesMessage;
-        console.log('succesMessage: ', succesMessage);
+        objMessage.div.textContent = objMessage.succesMessage;
+        console.log('succesMessage: ', objMessage.succesMessage);
+        },() =>{
+          objMessage.div.textContent = objMessage.loadMessage;
+          console.log('succesMessage: ', objMessage.loadMessage);
+        },
+          (error) => {
+          objMessage.div.textContent = objMessage.errorMessage;
+          console.log('errorMessage: ', objMessage.errorMessage);
+          console.error(error);
+        });
       
-      }, (error) => {
-        flyAnimate();
-        statusMessage.textContent = errorMessage;
-        console.log('errorMessage: ', errorMessage);
-        console.error(error);
-      });
     });
   };
- // sendFormPopUp(); 
+ sendFormPopUp(); 
 
-  // send-ajax-form2-connect
-  const sendFormConnect = () => {
-    const form = document.getElementById('form2');
-    const objMessage = creatDivMessage();
-
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      form.appendChild(statusMessage);
-      
-      postData(formSendAll(form), () => {
-        statusMessage.textContent = succesMessage;
-        formClear(form);
-        const tempDiv = form.querySelector('.status-message');
-        if (!!tempDiv) {
-          tempDiv.parentNode.removeChild(tempDiv);
-        }
-      }, (error) => {
-        statusMessage.textContent = errorMessage;
-        console.error(error);
-      });
-
-    });
-  };
- // sendFormConnect();
 
 });
