@@ -93,7 +93,7 @@ validation();
     }
   };
 
-  countTimer('1 december 2019');
+  countTimer('2 december 2019');
 
   //menu
   const toggleMenu = () =>{
@@ -475,7 +475,7 @@ validation();
   calc(100);
 
 
-
+  //send-ajax STAFF:
   const formSendAll = (form) => {
       let body = {}; 
       const formData =  new FormData(form);
@@ -490,26 +490,28 @@ validation();
   };
   
   const postData = (body,  outputData, waitData, error) => {
-    const request = new XMLHttpRequest();
-    request.addEventListener('readystatechange', () => {
-      
-      if (request.readyState !== 4) {
-        waitData();
-        return;
-      }
-      if (request.status === 200) {
-        outputData();
-      } else {
-        error(request.status);
-      }
+    return new Promise((resolve, reject) => {  
+      const request = new XMLHttpRequest();
+      request.addEventListener('readystatechange', () => {
+        
+        if (request.readyState !== 4) {
+          //waitData();
+          return;
+        }
+        if (request.status === 200) {
+          resolve();
+        } else {
+          reject(request.status);
+        }
+      });
+      request.open('POST', './server.php');
+      request.setRequestHeader('Content-Type', 'application/json');
+      //request.send(formData);
+      console.log(body);
+      request.send(JSON.stringify(body));
     });
-    request.open('POST', './server.php');
-    request.setRequestHeader('Content-Type', 'application/json');
-    //request.send(formData);
-    request.send(JSON.stringify(body));
   };
-    
-  // send-ajax-form1
+  //jljklkjlkj
   const creatDivMessage = () => {
     const objMessage = {
       errorMessage: 'Что то не так ',
@@ -523,7 +525,7 @@ validation();
     objMessage.div = statusMessage;
     return objMessage;
   };
-
+  // send-ajax-form1 and form2
   const sendForm = (formArgument) => {
     const form = document.getElementById(formArgument);
     const objMessage = creatDivMessage();
@@ -532,27 +534,25 @@ validation();
     form.addEventListener('submit', (event) => {
      event.preventDefault();
      form.appendChild(objMessage.div);
-     
 
-      postData(formSendAll(form), () => {
-        objMessage.div.textContent = objMessage.succesMessage;
-        console.log('succesMessage: ', objMessage.succesMessage);
-        formClear(form);
-        const tempDiv = form.querySelector('.status-message');
-        setTimeout(() => { if (!!tempDiv) {
-           tempDiv.parentNode.removeChild(tempDiv);}
-          },3000);
-      },() =>{
-        objMessage.div.textContent = objMessage.loadMessage;
-        console.log('succesMessage: ', objMessage.loadMessage);
-      },
-        (error) => {
+     postData(formSendAll(form))
+        .then(() => {
+          objMessage.div.textContent = objMessage.succesMessage;
+          console.log('succesMessage: ', objMessage.succesMessage);
+          formClear(form);
+          const tempDiv = form.querySelector('.status-message');
+          setTimeout(() => { if (!!tempDiv) {
+             tempDiv.parentNode.removeChild(tempDiv);}
+            },3000);
+        })
+        .catch((error) => {
           objMessage.div.textContent = objMessage.errorMessage;
          console.log('errorMessage: ', objMessage.errorMessage);
          console.error(error);
-      });
+        });
     });
   };
+
   sendForm('form1');
 
   sendForm('form2');
@@ -604,7 +604,7 @@ validation();
       
     });
   };
- sendFormPopUp(); 
+  sendFormPopUp(); 
 
 
 });
