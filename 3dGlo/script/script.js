@@ -15,6 +15,7 @@ window.addEventListener('DOMContentLoaded', function () {
       item.value = item.value.replace(/[^а-яё\s]/gi, '');
     });
   });     
+  
   inputEmail.forEach(item => {
     item.addEventListener('input',() => {
    //debugger;
@@ -586,25 +587,25 @@ validation();
       event.preventDefault();
       const objMessage = creatDivMessage();
       form.appendChild(objMessage.div);
-
-      postData(formSendAll(form), () => {
+ 
+      postData(formSendAll(form))
+      .then(() => {
         formClear(form);
         flyAnimate();
         objMessage.div.textContent = objMessage.succesMessage;
         console.log('succesMessage: ', objMessage.succesMessage);
-        },() =>{
-          objMessage.div.textContent = objMessage.loadMessage;
-          console.log('succesMessage: ', objMessage.loadMessage);
-        },
-          (error) => {
-          objMessage.div.textContent = objMessage.errorMessage;
-          console.log('errorMessage: ', objMessage.errorMessage);
-          console.error(error);
-        });
-      
+      })
+      .catch((error) => {
+        objMessage.div.textContent = objMessage.errorMessage;
+        console.log('errorMessage: ', objMessage.errorMessage);
+        console.error(error);
+      });
+
+        
     });
+    
+    //});
   };
   sendFormPopUp(); 
-
 
 });
