@@ -605,6 +605,4 @@ validation();
     });
   };
  sendFormPopUp(); 
-
-
 });
