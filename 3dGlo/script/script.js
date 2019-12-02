@@ -490,37 +490,18 @@ validation();
     form.querySelectorAll('input').forEach(item => item.value = '');
   };
   
-  const postData = (body,  outputData, waitData, error) => {
-    return new fetch('./server.php',{
+  const postData = (body) => {
+    console.log('fetch: ', fetch);
+    return  fetch('./server.php',{
       method: 'Post',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(body),
-      credentials: 123
-    });
-    return new Promise((resolve, reject) => {  
-      const request = new XMLHttpRequest();
-      request.addEventListener('readystatechange', () => {
-        
-        if (request.readyState !== 4) {
-          //waitData();
-          return;
-        }
-        if (request.status === 200) {
-          resolve();
-        } else {
-          reject(request.status);
-        }
-      });
-      request.open('POST', './server.php');
-      request.setRequestHeader('Content-Type', 'application/json');
-      //request.send(formData);
-      console.log(body);
-      request.send(JSON.stringify(body));
+      credentials: 'include'
     });
   };
-  //jljklkjlkj
+
   const creatDivMessage = () => {
     const objMessage = {
       errorMessage: 'Что то не так ',
@@ -545,7 +526,11 @@ validation();
      form.appendChild(objMessage.div);
 
      postData(formSendAll(form))
-        .then(() => {
+        .then((response) => {
+          if (response.status !== 200){
+            throw new  Error('Status network not 200');
+          }
+          console.log(response);
           objMessage.div.textContent = objMessage.succesMessage;
           console.log('succesMessage: ', objMessage.succesMessage);
           formClear(form);
@@ -556,7 +541,6 @@ validation();
         })
         .catch((error) => {
           objMessage.div.textContent = objMessage.errorMessage;
-         console.log('errorMessage: ', objMessage.errorMessage);
          console.error(error);
         });
     });
@@ -597,7 +581,10 @@ validation();
       form.appendChild(objMessage.div);
  
       postData(formSendAll(form))
-      .then(() => {
+      .then((response) => {
+        if (response.status !== 200){
+          throw new  Error('Status network not 200');
+        }
         formClear(form);
         flyAnimate();
         objMessage.div.textContent = objMessage.succesMessage;
