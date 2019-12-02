@@ -491,6 +491,14 @@ validation();
   };
   
   const postData = (body,  outputData, waitData, error) => {
+    return new fetch('./server.php',{
+      method: 'Post',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body),
+      credentials: 123
+    });
     return new Promise((resolve, reject) => {  
       const request = new XMLHttpRequest();
       request.addEventListener('readystatechange', () => {
