@@ -1,9 +1,9 @@
 const path = require('path');
 
-module.exports ={
+module.exports = {
   entry: {
     main:'./src/index.js',
-  },
+  }, 
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: '[name].js',
@@ -13,6 +13,6 @@ module.exports ={
     overlay: true
   },
   module: {
-    
+
   }
 };

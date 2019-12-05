@@ -11,7 +11,6 @@ const togglePopUp = () => {
   popUpBtn.forEach((elem) => {
     elem.addEventListener('click', () => {
       popUp.style.display = 'block';
-      validation();
      flyInterval = requestAnimationFrame(flyAnimate);
     });
   });
@@ -21,7 +20,7 @@ const togglePopUp = () => {
     popUpContent.style.opacity = 0;
     count = 0.01;
     
-    formClear(popUpContent);
+    popUpContent.querySelectorAll('input').forEach(item => item.value = '');
     const tempDiv = popUpContent.querySelector('.status-message');
     if (!!tempDiv) {
       tempDiv.parentNode.removeChild(tempDiv);

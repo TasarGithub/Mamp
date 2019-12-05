@@ -40,18 +40,5 @@ slider();
 
 calc(100);
 
-
-//send-ajax STAFF:
- formSendAll 
- formClear 
- postData  
- creatDivMessage
-// send-ajax-form1 and form2
-
-sendForm('form1');
-
-sendForm('form2');
-
-// send-ajax-popUpform
-
-sendFormPopUp(); 
+// send-ajax
+sendForm();
