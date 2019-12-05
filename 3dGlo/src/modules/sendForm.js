@@ -50,15 +50,22 @@ const sendForm = (formArgument) => {
   // навешиваем оброботки события на submit
   form.forEach(item => { 
     item.addEventListener('submit', (event) => {
-
+      let flag = 0;
       const formData =  new FormData(item);
+      // debugger;
       formData.forEach((val, key) => {
+        
+        if ((val.trim() === '') && (key.indexOf('mess') === -1)) {
+          flag = 1;
+        }
         body[key] = val;
       });
-
+      
       event.preventDefault();
-      item.appendChild(objMessage.div);
 
+      if (flag) return; // незаполненная часть формы -уходим
+      item.appendChild(objMessage.div);
+      // alert('postdata next');
       postData(body)
       .then((response) => {
         if (response.status !== 200){
