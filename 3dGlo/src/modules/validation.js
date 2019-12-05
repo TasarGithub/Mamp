@@ -15,19 +15,19 @@ const validation = () => {
   inputEmail.forEach(item => {
     item.addEventListener('input',() => {
    //debugger;
-      item.value = item.value.replace(/[^a-z@-_\d]/gi, '');
+      item.value = item.value.replace(/[^a-z@_.'+\d-]/gi, '');
     });
   });   
   inputMessage.forEach(item => {
     item.addEventListener('input',() => {
       //debugger;
-      item.value = item.value.replace(/[^а-яё\s]/gi, '');
+      item.value = item.value.replace(/[^а-яё.'"!?_()\s,:;-]/gi, '');//    (/[^а-яё\s]/gi, '');
     });
   });     
   inputTelephone.forEach(item => {
     item.addEventListener('input',() => {
       //debugger;
-      item.value = item.value.replace(/\D/g, '');
+      item.value = item.value.replace(/[^+\d\s]/g, '');
     });
   });
 };
