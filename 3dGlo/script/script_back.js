@@ -94,7 +94,7 @@ validation();
     }
   };
 
-  countTimer('6 december 2019');
+  countTimer('2 december 2019');
 
   //menu
   const toggleMenu = () =>{
@@ -162,7 +162,7 @@ validation();
       popUpContent.style.opacity = 0;
       count = 0.01;
       
-      popUpContent.querySelectorAll('input').forEach(item => item.value = '');
+      formClear(popUpContent);
       const tempDiv = popUpContent.querySelector('.status-message');
       if (!!tempDiv) {
         tempDiv.parentNode.removeChild(tempDiv);
@@ -476,30 +476,91 @@ validation();
   calc(100);
 
 
-  //send-ajax
-  const sendForm = (formArgument) => {
-    const popUp = document.querySelector('.popup'),
-    popUpContent = document.querySelector('.popup-content'),
-    form = document.querySelectorAll('.form123'),
-    objMessage = {
+  //send-ajax STAFF:
+  const formSendAll = (form) => {
+      let body = {}; 
+      const formData =  new FormData(form);
+      formData.forEach((val, key) => {
+        body[key] = val;
+      });
+      return body;
+  };
+
+  const formClear = (form) => {
+    form.querySelectorAll('input').forEach(item => item.value = '');
+  };
+  
+  const postData = (body) => {
+    console.log('fetch: ', fetch);
+    return  fetch('./server.php',{
+      method: 'Post',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body),
+      credentials: 'include'
+    });
+  };
+
+  const creatDivMessage = () => {
+    const objMessage = {
       errorMessage: 'Что то не так ',
       loadMessage: 'Загрузка',
       succesMessage:  'Спасибо ! Скоро свяжемся с вами',
-    },
-    statusMessage =  document.createElement('div');
-    let body = {};
+    };
+    const statusMessage =  document.createElement('div');
     statusMessage.classList.add('status-message');
     statusMessage.style.cssText = 'font-size: 2rem; color: #fff;'; 
     statusMessage.textContent = objMessage.loadMessage;
     objMessage.div = statusMessage;
+    return objMessage;
+  };
+  // send-ajax-form1 and form2
+  const sendForm = (formArgument) => {
+    const form = document.getElementById(formArgument);
+    const objMessage = creatDivMessage();
 
+    //debugger;
+    form.addEventListener('submit', (event) => {
+     event.preventDefault();
+     form.appendChild(objMessage.div);
 
-    //анимация для popup
+     postData(formSendAll(form))
+        .then((response) => {
+          if (response.status !== 200){
+            throw new  Error('Status network not 200');
+          }
+          console.log(response);
+          objMessage.div.textContent = objMessage.succesMessage;
+          console.log('succesMessage: ', objMessage.succesMessage);
+          formClear(form);
+          const tempDiv = form.querySelector('.status-message');
+          setTimeout(() => { if (!!tempDiv) {
+             tempDiv.parentNode.removeChild(tempDiv);}
+            },3000);
+        })
+        .catch((error) => {
+          objMessage.div.textContent = objMessage.errorMessage;
+         console.error(error);
+        });
+    });
+  };
+
+  sendForm('form1');
+
+  sendForm('form2');
+
+  // send-ajax-popUpform
+  const sendFormPopUp = () => {
+    const popUp = document.querySelector('.popup'),
+     form = document.getElementById('form3'),
+     popUpContent = document.querySelector('.popup-content');
+
     let count = 1;
     let flyAnimate = () => {
 
       const flyInterval = requestAnimationFrame(flyAnimate);
-      count = count - 0.005;
+      count = count - 0.01;
 
       if (popUpContent.style.opacity >= 0) {
         popUpContent.style.opacity = count; 
@@ -513,57 +574,33 @@ validation();
           count = 0;
         }
     };
-    //отправка данных на сервер
-    const postData = (body) => {
-      
-      return  fetch('./server.php',{
-        method: 'Post',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(body),
-        credentials: 'include'
-      });
-    };
-  
-    // навешиваем оброботки события на submit
-    form.forEach(item => { 
-      item.addEventListener('submit', (event) => {
 
-        const formData =  new FormData(item);
-        formData.forEach((val, key) => {
-          body[key] = val;
-        });
-
-        event.preventDefault();
-        item.appendChild(objMessage.div);
-  
-        postData(body)
-        .then((response) => {
-          if (response.status !== 200){
-            throw new  Error('Status network not 200');
-          }
-          item.querySelectorAll('input').forEach(item => item.value = '');
-          objMessage.div.textContent = objMessage.succesMessage;
-        })
-        .then(() => {
-          if (popUp.style.display === 'block'){
-            flyAnimate();
-          } else {
-          const tempDiv = item.querySelector('.status-message');
-          setTimeout(() => { 
-            if (!!tempDiv) {
-            tempDiv.parentNode.removeChild(tempDiv);}
-            },4000);
-          }
-        })
-        .catch((error) => {
-          objMessage.div.textContent = objMessage.errorMessage;
-          console.log('errorMessage: ', objMessage.errorMessage);
-          console.error(error);
-        });
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const objMessage = creatDivMessage();
+      form.appendChild(objMessage.div);
+ 
+      postData(formSendAll(form))
+      .then((response) => {
+        if (response.status !== 200){
+          throw new  Error('Status network not 200');
+        }
+        formClear(form);
+        flyAnimate();
+        objMessage.div.textContent = objMessage.succesMessage;
+        console.log('succesMessage: ', objMessage.succesMessage);
+      })
+      .catch((error) => {
+        objMessage.div.textContent = objMessage.errorMessage;
+        console.log('errorMessage: ', objMessage.errorMessage);
+        console.error(error);
       });
+
+        
     });
+    
+    //});
   };
-  sendForm(); 
+  sendFormPopUp(); 
+
 });
