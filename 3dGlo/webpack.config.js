@@ -13,6 +13,8 @@ module.exports = {
     overlay: true
   },
   module: {
-
+    test: /\.js$/,
+    loader: 'babel-loader',
+    exclude: /'node_modeles'/
   }
 };

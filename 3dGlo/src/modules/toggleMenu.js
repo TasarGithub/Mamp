@@ -15,7 +15,7 @@ const toggleMenu = () =>{
      handlerMenu();
    });
 
-   //обработока кликов на закрытие по closeBtn и элементам меню
+   //обработка кликов на закрытие по closeBtn и элементам меню
    menu.addEventListener('click', (event) => {
     let target =  event.target;
     

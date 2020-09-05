@@ -1,0 +1,5 @@
+# php errors
+php_flag display_errors On
+
+# аналог error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING  ^ E_DEPRECATED);
+php_value error_reporting 22517

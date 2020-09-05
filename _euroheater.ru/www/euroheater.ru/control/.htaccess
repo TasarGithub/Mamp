@@ -1,0 +1,18 @@
+DirectoryIndex index.php
+
+# 404
+ErrorDocument 404 http://euroheater.ru/control/
+
+AuthType Basic
+AuthName "Enter login & password:"
+AuthUserFile /var/www/euroheater/data/www/euroheater.ru/control/.htpasswd
+require valid-user
+
+# php errors
+php_flag display_errors On
+
+# аналог error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING  ^ E_DEPRECATED);
+php_value error_reporting 22517
+
+# выключаем apache mod rewrite
+RewriteEngine off

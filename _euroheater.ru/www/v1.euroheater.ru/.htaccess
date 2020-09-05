@@ -1,0 +1,3 @@
+ErrorDocument 404 http://v1.euroheater.ru
+
+DirectoryIndex index.htm

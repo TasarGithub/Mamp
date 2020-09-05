@@ -1,0 +1,63 @@
+[inp:sftplink_cmd: SFTP to machine ]
+0=ftp://arenda_elektr@185.12.126.99:622
+1=arenda_elektr@185.12.126.99:622
+2=arenda_elektr@localhost:622
+
+[inp:fishlink_cmd: Shell link to machine ]
+0=sh://arenda_elektr@185.12.126.99:622/home/arenda_elektr/data/www/arenda-elektrostancii.ru
+1=/#sh@185.12.126.99:622/home/arenda_elektr/data/www/arenda-elektrostancii.ru
+2=localhost
+3=localhost:622
+4=sh://arenda_elektr@185.12.126.99:622/home/arenda_elektr/data/
+5=sh://arenda_elektr@185.12.126.99:622
+6=sh://a28001@185.12.124.135/home/a28001/data/
+7=sh://a28001@185.12.124.135:622/home/a28001/data/
+8=sh://arenda_elektr@95.181.171.240:622/home/arenda_elektr/
+
+[inp:ftplink_cmd: FTP to machine ]
+0=ftp://arenda_elektr@95.181.171.240:622/home/arenda_elektr/
+
+[input-def]
+0=*
+
+[input2]
+0=/var/www/euroheater/data/www/euroheater.fboss.ru
+
+[cmdline]
+0=cd ~
+1=cd /home/arenda_elektr/data/www/arenda-elektrostancii.ru
+2=cd sh://a28001@185.12.124.135/home/a28001/data/
+3=
+4=OA
+
+[Dir Hist New Right Panel]
+0=/sftp://arenda_elektr@185.12.126.99:622/home/backuper/.ssh
+1=/sftp://arenda_elektr@185.12.126.99:622/home/backuper
+2=/sftp://arenda_elektr@185.12.126.99:622/home
+3=/sftp://arenda_elektr@185.12.126.99:622/
+4=/sftp://arenda_elektr@185.12.126.99:622/var
+5=/sftp://arenda_elektr@185.12.126.99:622/var/www
+6=/sftp://arenda_elektr@localhost:622/
+7=/sftp://arenda_elektr@localhost:622/home/backuper/.ssh
+8=/sftp://arenda_elektr@localhost:622/home/backuper
+9=/sftp://arenda_elektr@localhost:622/home
+10=/var/www/euroheater
+11=/var/www/euroheater/data
+12=/sh://arenda_elektr@185.12.126.99:622/var/backups
+13=/sh://arenda_elektr@185.12.126.99:622/var
+14=/sh://arenda_elektr@185.12.126.99:622/usr
+15=/sh://arenda_elektr@185.12.126.99:622/tmp
+16=/sh://arenda_elektr@185.12.126.99:622/home/backuper/.ssh
+17=/sh://arenda_elektr@185.12.126.99:622/home/backuper
+18=/sh://arenda_elektr@185.12.126.99:622/home
+19=/sh://arenda_elektr@185.12.126.99:622/
+20=/sh://a28001@185.12.124.135:622/home/a28001/data
+21=/sh://a28001@185.12.124.135:622/home/a28001/data/www
+22=/var/www/euroheater/data/www
+23=/var/www/euroheater/data/www/euroheater.fboss.ru
+
+[Dir Hist New Left Panel]
+0=/var/www/euroheater/data
+1=/var/www/euroheater/data/www/euroheater.fboss.ru
+2=/var/www/euroheater/data/www/www_v1.zip/uzip://
+3=/var/www/euroheater/data/www
