@@ -1,0 +1,122 @@
+.hero
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  padding-top: 7.14rem
+  background: $dark url('../img/hero-bg.jpg') no-repeat center / cover
+  height: 95vh
+  color: $light
+  z-index: 30
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background-color: rgba($dark, 0.7)
+  // &::after
+  //   content: ''
+  //   position: absolute
+  //   bottom: 0
+  //   left: 0
+  //   right: 0
+  //   width: 100%
+  //   height: 3.46rem
+  //   background-color: $dark
+  &__instagram
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    max-width: 80px
+    z-index: 30
+  &__scroll-down
+    position: absolute
+    z-index: 3
+    left: 0
+    bottom: -3.46rem
+    display: flex
+    justify-content: center         
+    align-items: center
+    min-width: 17.6rem
+    min-height: 6.92rem
+    text-decoration: none
+    text-transform: uppercase
+    font-family: 'Yeseva One', cursive
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 138.6%
+    color: $light
+    background-color: $dark
+    z-index: 30
+    &::after
+      content: ''
+      background: url('../img/arrow-down.svg') no-repeat center
+      width: 30px
+      height: 30px
+      border: 2px solid $primary
+      border-radius: 50%
+      background-color: $dark
+      margin-left: 18px
+  &__title
+    max-width: 32.85rem
+  &__content
+    position: relative
+    max-width: 47.857rem
+    margin-left: 4.285rem
+  &__text
+    font-size: 1.57rem
+    max-width: 35.71rem
+    margin: 0
+    margin-top: 1.1rem
+    line-height: 138%
+    margin-bottom: 45px
+  &__button-primary
+    margin-right: 1.43rem
+    padding: 17px 30px
+    line-height: 15px
+  &__button-outline
+    padding: 17px 41px
+    line-height: 15px
+.instagram
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $dark
+  min-width: 91.50px
+  &__link
+    display: flex
+    align-items: center
+    text-decoration: none
+    text-transform: uppercase
+    color: $primary
+    transform: rotate(90deg)
+    font-family: 'Futura Demi', sans-serif 
+    font-weight: 500
+    line-height: 1.1
+    font-size: 0.99rem
+    margin-top: 63px  
+    &::after
+      content: ''
+      width: 50px
+      height: 1px
+      background-color: $primary
+      margin-left: 14px
+  &__container
+    margin: 0 auto
+.title
+  margin: 0
+  font-family: 'Yeseva One', cursive
+  text-transform: uppercase
+  font-size: 2.857rem
+  font-weight: 400
+  line-height: 135%
+  &--primary
+    color: $primary
+    white-space: nowrap
+
+
+

@@ -1,0 +1,88 @@
+.modal, .modal-thanks
+  opacity: 0
+  visibility: hidden
+  position: fixed
+  z-index: 199
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+  width: 100%
+  height: 100%
+  background-color: rgba($dark, 0.6)
+  display: flex
+  align-items: center
+  justify-content: center
+  &--visible
+    opacity: 1
+    visibility: visible
+  &__dialog
+    position: relative
+    max-width: 36.36rem 
+    background: $dark url('../img/bg-form.png') no-repeat center / cover
+    background-size: 112% 140%
+    padding: 2.357rem 3.5rem 1.928rem
+    color: $light
+  &__text
+    font-family: 'Yeseva One', cursive
+    font-size: 1.357rem
+    text-align: center
+    color: $primary
+  &__close
+    position: absolute
+    right: 2px
+    top: 2px
+    width: 28px
+    height: 28px
+    background: transparent url('../img/close.svg') no-repeat center
+    border: none
+    margin: 12px
+    cursor: pointer
+    outline-color: transparent
+  &__title
+    font-family: 'Yeseva One', cursive
+    font-size: 1.357rem
+    text-align: center
+    margin: auto
+    margin-bottom: 25px
+    line-height: 1.5
+    letter-spacing: 0.1px
+  &__form
+    display: flex
+    flex-direction: column
+  &__input
+    display: flex
+    flex-direction: column
+    &::placeholder
+      font-family: 'Futura Medium', sans-serif
+      font-style: normal
+      font-weight: 500
+      font-size: 1.285rem
+      line-height: 1.71rem
+    &-group
+      margin-bottom: 3.3rem
+      &:nth-child(3)
+        margin-bottom: 16.06px
+    // &:last-of-type
+    //   margin-bottom: 1rem
+  &__policy
+    margin-bottom: 2.7rem
+  &__button
+    align-self: flex-end
+    padding: 17px 47.5px
+    margin-right: 2px
+    margin-top: -2px
+  &__thanks-block
+    display: none
+    width: 100%
+//#user-name-modal
+  //margin-top: 0px
+#user-email-modal
+  margin-top: -2px
+
+
+
+
+
+
+    

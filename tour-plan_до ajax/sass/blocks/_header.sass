@@ -1,0 +1,236 @@
+.navbar
+	//background: linear-gradient(to top, $dark 40%, transparent 0%)
+	background-color: #fff
+	// &__wrap
+	// 	margin: 0 0 18px 0
+	&--mobile-fixed
+		@media screen and ( max-width: 768px)
+			position: fixed
+			top: 0
+			left: 0
+			right: 0
+			z-index: 99
+
+
+	&__top
+		display: flex
+		justify-content: space-between
+		align-items: center
+		max-height: 120px
+		padding: 40px 0
+		@media screen and ( max-width: 576px)
+			padding: 27px 0
+		// border: 1px solid red
+
+
+
+	&__logo
+		display: block
+		max-height: 24px
+
+	&__bottom
+		background-color: $dark
+		@media screen and ( max-width: 768px)
+			// display: none
+			position: fixed
+			//top: 78px
+			top: -100%
+			right: 0
+			left: 0
+			bottom: 0
+			z-index: 40
+			padding: 31px 0 48px 0
+			height: 100vh
+			overflow: auto
+			transition: all 0.3s ease 0s
+		&--mobile-menu
+			@media screen and ( max-width: 768px)
+				// display: block
+				top: 78px
+
+
+
+
+.form
+	&__search
+		display: block
+		height: 40px
+		margin-right: auto
+		margin-left: 108px
+		@media screen and ( max-width: 992px)
+			margin-left: auto
+			min-height: 30px
+		@media screen and ( max-width: 768px)
+			width: 245px
+			min-height: 40px
+			margin: 0 auto 19px
+			display: none
+	&-input__search
+		height: 100%
+		background-color: $secondary
+		width: 350px
+		@media screen and ( max-width: 992px)
+			width: 340px
+		@media screen and ( max-width: 768px)
+			width: 180px
+
+	&-button__search
+		padding: 10.5px 0
+		width: 65px
+		position: absolute
+		right: 0
+		top: 0
+
+
+
+.navbar__burger
+	display: none
+	// visibility: hidden
+	// opacity: 0
+	position: relative
+	width: 16px
+	height: 11px
+	@media screen and ( max-width: 768px)
+		display: block
+	&::after,&::before
+		content: ''
+		background-color: $text-color
+		position: absolute
+		width: 100%
+		height: 1px
+		left: 0
+		top: 0
+		transition: all 0.3s ease 0s
+	&::after 
+		top: 8px
+	&>span
+		position: absolute
+		background-color: $text-color
+		left: 0
+		top: 4px
+		width: 100%
+		height: 1px
+		transition: all 0.3s ease 0s
+
+.navbar__burger.active
+	&>span
+		opacity: 0
+	&::before
+		transform: rotate(45deg)
+		top: 4px
+	&::after
+		transform: rotate(-45deg)
+		top: 4px
+		// bottom: 2px
+		
+		
+
+		
+
+
+
+
+
+.menu-btn
+	display: block
+	width: 16px
+	height: 11px
+	display: none
+	border: none
+	padding: 0
+	@media screen and ( max-width: 768px)
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+	&__line
+		width: 16px
+		height: 1px
+		background-color: $text-color
+		// @media screen and ( max-width: 768px)
+	&:hover
+		cursor: pointer
+
+
+.menu
+	width: 100%
+	padding: 30.5px 0
+	display: flex
+	justify-content: space-between
+	align-items: center
+	@media screen and ( max-width: 992px)
+		padding: 22px 0
+	@media screen and ( max-width: 768px)
+
+		flex-direction: column
+		// align-items: center
+		justify-content: center
+	&__item
+		@media screen and ( max-width: 768px)
+			margin: 0 0 20px 0
+
+
+.menu__link
+	font-weight: Bold
+	text-decoration: none
+	color: $light
+	text-transform: uppercase
+	line-height: 18px
+	@media screen and ( max-width: 992px)
+		font-size: 12px
+		line-height: 15px
+
+
+.logo
+	width: 177px // если поставить др картинку, надо чтобы сохранилась размер занимаемого места. Можно не max-width, тк контроль будет на адаптиве в медиазапросах
+	@media screen and ( max-width: 992px)
+		width: 132px
+	@media screen and ( max-width: 992px)
+		width: 99px
+
+
+.user
+	display: flex
+	justify-content: space-between
+	align-items: center
+	max-width: 107px
+	text-decoration: none
+	color: $text-color
+	@media screen and ( max-width: 768px)
+		display: none
+
+	&__avatar
+		border-radius: 50%
+		height: 40px 
+		width: 40px
+		object-fit: cover
+		background: url('../img/user-avatar.jpg') no-repeat center/cover;
+		@media screen and ( max-width: 768px)
+			text-align: center
+			margin: 0 auto 10px
+	&__name
+		margin-left: 18px
+		@media screen and ( max-width: 786px)
+			margin: 0 0 7px 0
+			display: inline-block
+			color: $light
+
+
+.mobile-block--invisible
+	display: block
+	@media screen and ( max-width: 768px)
+		display: none
+
+.mobile-block--visible
+	display: none
+	@media screen and ( max-width: 768px)
+		display: block
+
+.mobile-flex--invisible
+	display: flex
+	@media screen and ( max-width: 768px)
+		display: none
+
+.mobile-flex--visible
+	display: none
+	@media screen and ( max-width: 768px)
+		display: flex

@@ -1,0 +1,29 @@
+.hero
+  &__go-back    //для отдельной страницы спасибо
+    position: relative
+    // z-index: 3
+    // left: 0
+    // bottom: 0
+    display: flex
+    justify-content: center//space-around
+    align-items: center
+    max-width: 13rem
+    min-height: 3.5rem
+    text-decoration: none
+    text-transform: uppercase
+    border: 1px solid $light
+    border-radius: 2px
+    color: $light
+    background-color: $dark
+    margin-top: 2.5rem
+    padding: 0  1.43rem 0 0
+    &::before
+      content: ''
+      background: url('../img/go-back.svg') no-repeat center
+      width: 30px
+      height: 30px
+      // border: 2px solid $primary
+      // border-radius: 50%
+      background-color: $dark
+      margin-right: 1.2rem
+      // margin-left: 12px

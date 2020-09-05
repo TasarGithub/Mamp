@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="//api-maps.yandex.ru"><link rel="dns-prefetch" href="//api-maps.yandex.ru"><link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;600;700;800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet"><!-- font-family: 'Muli', sans-serif;
+	font-family: 'Nunito', sans-serif; --><link rel="stylesheet" href="./css/swiper-bundle.min.css"><link rel="stylesheet" href="./css/style.css"><title>Best Tour Plan - Hotel Booking</title></head><body><header class="navbar navbar__wrap"><div class="container navbar__container"><div class="navbar__top"><a href="" class="logo navbar__logo"><img src="img/horizontal-logo.svg" alt="Logo: Best Tour plan" class="logo__img"></a><form action="#" class="form navbar__form"><input type="text" class="form__input navbar--input" placeholder="Search Location"> <button class="form__button"><img src="img/search.svg" alt="Icon: search"></button></form><a href="#" class="user navbar__user"><!-- <img src="img/user-avatar.jpg" alt="Avatar: Natan" class="user__avatar"> --><div class="user__avatar"></div><span class="user__name">Natan</span> </a><button class="menu-btn navbar__menu-btn"><span class="menu-btn__line"></span> <span class="menu-btn__line"></span> <span class="menu-btn__line"></span></button></div><!-- /.navbar__top --></div><!-- /.container container__navbar--><nav class="navbar__bottom"><div class="container"><ul class="menu"><li class="menu__item"><a href="#" class="menu__link">All Deals</a></li><li class="menu__item"><a href="#" class="menu__link">Hotels</a></li><li class="menu__item"><a href="#" class="menu__link">Activities</a></li><li class="menu__item"><a href="#" class="menu__link">Hotel Day Packages</a></li><li class="menu__item"><a href="#" class="menu__link">Restaurants</a></li><li class="menu__item"><a href="#" class="menu__link">Events</a></li><li class="menu__item"><a href="#" class="menu__link">Rodrigues</a></li></ul><!-- /.menu navbar__menu--></div><!-- /.container --></nav><!-- /.nav navbar__bottom--></header><nav class="breadcrumbs"><div class="container breadcrumbs__container"><ul class="breadcrumbs__body"><li class="breadcrumbs__item"><a href="#">Home</a></li><li class="breadcrumbs__item"><a href="#">Flash Offers</a></li><li class="breadcrumbs__item"><a href="#">Grand Hilton Hotel</a></li></ul><!-- /. breadcrumbs__body --></div><!-- /.container breadcrumbs__container--></nav><!-- /.breadcrumbs --><section class="hotel"><div class="hotel-name"><div class="container hotel-name__container"><div class="hotel-name__text"><div class="hotel-name__stars"><img src="img/star.svg" alt="Hotel: Rating in Stars" class="hotel-name__star"> <img src="img/star.svg" alt="Hotel: Rating in Stars" class="hotel-name__star"> <img src="img/star.svg" alt="Hotel: Rating in Stars" class="hotel-name__star"> <img src="img/star.svg" alt="Hotel: Rating in Stars" class="hotel-name__star"> <img src="img/star.svg" alt="Hotel: Rating in Stars" class="hotel-name__star"></div><h1 class="title hotel-name__title">Grand hilton hotel</h1><span class="hotel-name__offer">Flash Offer</span> <span class="hotel-name__description">Half-Board/ All Inclusive + Complimentary Activities + Child Stays Free</span></div><!-- /.hotel-name__text --><div class="hotel-name__ratings"><span class="hotel-name__ratings-text">User Rattings</span><p class="hotel-name__ratings-number"><span>4.5</span> <span>/</span> <span>5</span></p></div><!-- /.hotel-name__ratings --></div><!-- /.container hotel-name__container --></div><!-- /.hotel-name --><div class="hotel-body"><div class="container hotel-body__container"><div class="hotel-body__slider"></div><!-- /.hotel-body__slider --><div class="hotel-body__info"><div class="booking hotel-body__booking"><div class="booking__row"><div class="booking__col50"><span class="booking__price-starts">price starts as</span> <strong class="booking__price">$ 8,500</strong> <span class="booking__per-room">per room / night</span></div><!-- /.booking__col50 --><div class="booking__col50"><span class="booking__2Guests">2 x Guests</span> <span class="booking__1room">1 x Room</span></div><!-- /.booking__col50 --></div><!-- /.booking__row --><div class="booking__call-center"><h3 class="booking__title">Quick Booking</h3><!-- /.booking__title --> <a href="tel:12100" class="booking__telephone">12100</a></div><!-- /.booking__call-center--> <button class="booking__btn-order">View&nbsp;Other&nbsp;Options</button></div><!-- /.booking__booking --><div class="map" id="map"></div><!-- /.booking__geo --></div><!-- /.booking__info --></div><!-- /.container booking__container --></div><!-- /.booking --></section><!-- /.hotel --><section class="subscribe"><div class="subscribe__container"><h2 class="subscribe__text"><span class="subtitle subscribe__subtitle">subscribe to our </span><strong class="title subscribe__title">Newsletter</strong></h2><!-- /.subscribe__text --><form action="send" class="form subscribe__form"><input type="text" class="form__input subscribe--input" placeholder="Your email address"> <button class="button form__button subscribe--button"><span>Send</span></button></form><!-- /.subscribe__form --></div><!-- /.subscribe__container --></section><!-- /.subscribe --><section class="reviews"><div class="container reviews__container"><h1 class="title reviews__title">What people thinks about us</h1><!-- /.title reviews__title --><div class="reviews__swiper"><!-- Slider main container --><div class="swiper-container reviews--swiper-container"><!-- Additional required wrapper --><div class="swiper-wrapper"><!-- Slides --><div class="swiper-slide">Slide 1</div><div class="swiper-slide">Slide 2</div><div class="swiper-slide">Slide 3</div></div><!-- If we need navigation buttons --><div class="swiper-button swiper-button-reviews--prev"></div><div class="swiper-button swiper-button-reviews--next"></div><!-- If we need scrollbar --><div class="swiper-scrollbar"></div></div></div><!-- /.reviews__swiper --></div><!-- /.container reviews__container --></section><!-- /.reviews --><script src="//code.jquery.com/jquery-3.4.1.min.js"></script><!--СТАРАЯ версия  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> --><script src="js/swiper-bundle.min.js"></script><script src="js/wow.min.js"></script><script src="js/jquery.validate.min.js"></script><script src="js/jquery.mask.min.js"></script><!-- Отложенная Загрузка яндекс-карт --><script>setTimeout(function(){
+		var elem = document.createElement('script');
+		elem.type = 'text/javascript';
+		elem.src ='//api-maps.yandex.ru/2.1/?apikey=82309e32-bfc0-4ed6-af23-11eee8e9d283&lang=ru_RU&onload=getYaMap';
+		document.getElementsByTagName('body')[0].appendChild(elem);
+	}, 2000);
+
+	function getYaMap(){
+			var myMap = new ymaps.Map('map', {
+							center: [7.890703, 98.294772],
+							zoom: 15
+					}, {
+							searchControlProvider: 'yandex#search'
+					}),
+
+					// Создаём макет содержимого.
+					MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+							'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+					),
+
+					myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+							hintContent: 'DoubleTree by Hilton Phuket Banthai Resort',
+							balloonContent: 'тут был Артём'
+					}, {
+							// Опции.
+							// autoFitToViewport: 'ifNull',
+							// searchControlProvider: 'yandex#search',
+							// Необходимо указать данный тип макета.
+							iconLayout: 'default#image',
+							// Своё изображение иконки метки.
+							iconImageHref: 'img/location.png',
+							// Размеры метки.
+							iconImageSize: [32, 32],
+							// Смещение левого верхнего угла иконки относительно
+							// её "ножки" (точки привязки).
+							iconImageOffset: [-5, -38]
+					});
+					myMap.behaviors.disable('scrollZoom');
+			// myMap.container.fitToViewport();
+
+			myMap.geoObjects
+					.add(myPlacemark);
+			
+	}</script><script src="js/main.js"></script></body></html>

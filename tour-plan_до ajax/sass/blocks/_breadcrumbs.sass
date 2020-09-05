@@ -1,0 +1,25 @@
+.breadcrumbs 
+	padding: 19px 0 18px
+	font-size: 10px
+	line-height: 13px
+	// &__container
+	// 	margin-bottom: 19px
+	&__body 
+		display: flex
+	&__item
+		&:not(:last-child):after
+			content: "/"
+			margin: 0 4px 0 3px
+		&>a
+			text-decoration: none
+	&__item
+		&:last-child
+			&>a
+				color: inherit
+
+			
+
+			
+
+
+			

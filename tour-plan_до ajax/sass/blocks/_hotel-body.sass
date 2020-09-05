@@ -1,0 +1,103 @@
+.hotel-body
+	margin-bottom: 70px
+	@media screen and ( max-width: 768px)
+		margin-bottom: 60px
+	@media screen and ( max-width: 320px)
+		padding: 20px 0 0 0
+		margin-bottom: 40px
+	&__container
+		display: flex
+		justify-content: space-between
+		@media screen and ( max-width: 992px)
+			flex-direction: column
+		// align-items: center
+
+	&__slider
+
+		// border-radius: 8px
+		// overflow: hidden
+		@media screen and ( max-width: 992px)
+			margin-bottom: 30px
+		@media screen and ( max-width: 576px)
+			margin-bottom: 20px
+
+	
+	&__slide
+		background-repeat:  no-repeat
+		background-position: center
+		background-size: cover
+	
+
+	&__slider-img
+		// position: absolute
+		// top: 0
+		// left: 0
+		// bottom: 0
+		// right: 0
+		width: 100%
+		height: 100%
+		// object-fit: cover
+		opacity: 0
+
+
+	&__info
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		@media screen and ( max-width: 992px)
+			flex-direction: row
+		@media screen and ( max-width: 768px)
+			flex-direction: column
+			min-height: 440px
+
+
+	// &__booking
+	// 	margin-bottom: 
+
+.swiper-container--hotel-body
+	position: relative
+	width: 728px
+	height: 450px
+	border-radius: 8px
+	@media screen and ( max-width: 1200px)
+		width: 590px
+	//	height: 37.5vw//450/1200=0.375
+	@media screen and ( max-width: 992px) //0.705645*576=406.45152
+		width: 100%
+		height: 372px //height: 40.32vw //400/992=0.403226//height: 372px
+	@media screen and ( max-width: 768px)
+		// width: 100%//542px
+		height: 45.5729vw //350/768=0.455729
+	@media screen and ( max-width: 576px)
+		// width: 406px
+		height: 48.61vw //280/576=0.486111//280px
+	@media screen and ( max-width: 320px)
+		width: 278px
+		height: 179px
+	&::after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+		background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%)
+		border-radius: 8px
+		overflow: hidden
+		z-index: 10
+			
+
+
+.map
+	width: 347px
+	height: 213px
+	border-radius: 8px
+	overflow: hidden
+	@media screen and ( max-width: 992px)
+		width: 340px
+		height: 210px
+	@media screen and ( max-width: 768px)
+		width: 100%
+	
+
+

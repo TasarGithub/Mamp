@@ -1,0 +1,92 @@
+.hotel-name
+	padding: 23px 0 20px 0
+	@media screen and ( max-width: 440px)
+		padding: 5px 0 20px 0
+	&__container
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	//*********************************
+	&__text 
+		max-width: 390px
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		@media screen and ( max-width: 440px)
+			justify-content: space-between
+
+	&__stars 
+		flex: 0 0 100%
+		margin-bottom: 4px
+		@media screen and ( max-width: 440px)
+			flex: 0 0 40%	
+			text-align: end
+			margin-bottom: 10px
+
+	&__title
+		flex: 0 0 70%
+		margin-bottom: 4px
+		font-size: 24px
+		line-height: 30px
+		text-transform: uppercase
+		font-weight: bold
+		margin-right: 14px
+		@media screen and ( max-width: 440px)
+			flex: 0 0 100%
+			margin-bottom: 0px
+
+	&__offer
+		width: 70px
+		min-height: 22px
+		font-size: 10px
+		line-height: 22px
+		border-radius: 3px
+		color: $light
+		background-color: $primary
+		text-align: center
+		margin-bottom: 2px
+		@media screen and ( max-width: 440px)
+			order: -1
+			flex: 0 0 70px
+			margin-bottom: 10px
+		
+
+	&__description
+		flex: 0 0 100%
+		font-size: 12px
+		line-height: 15px
+
+	//********************************
+	&__ratings
+		width: 65px
+		height: 45px
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		background-color: $primary
+		color: $light
+		border-radius: 4px
+		@media screen and ( max-width: 576px)
+			display: none
+		&>span
+			font-size: 8px
+			line-height: 10px
+		&>p
+			font-size: 14px
+			line-height: 18px
+			&>:nth-child(1)
+				// display: block
+				margin-right: -2px
+			&>:nth-child(3)
+				margin-left: -2px
+				font-size: 9px
+				
+
+		
+			
+
+	&__ratings-text 
+
+	&__ratings-number 

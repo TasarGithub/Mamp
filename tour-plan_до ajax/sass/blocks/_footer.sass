@@ -1,0 +1,355 @@
+.footer
+	padding: 108px 0 46px 0
+	background-color: $dark
+	color: $light
+
+	&__container
+		margin: 0 auto
+		max-width: 1110px
+		@media screen and ( max-width: 1200px)
+			width: 92.5%
+
+
+	&__wrap
+		margin: 0 auto 63px
+		display: grid
+		grid-template-columns: 275px  270px  331px 194px//247px repeat(3, 261px) //257px 257px 257px 257px
+		grid-template-rows: 1fr 40px 93px 
+		// column-gap: 13px
+		justify-content: space-between
+		@media screen and ( max-width: 1200px)
+			grid-template-columns: repeat(3, 1fr)
+			grid-template-rows: max-content
+			// column-gap: normal
+			// row-gap: 20px
+		@media screen and ( max-width: 992px)
+			grid-template-columns: 162px 260px 202px
+		@media screen and ( max-width: 760px)
+			grid-template-columns: max-content 1fr
+			grid-template-rows: max-content
+			// column-gap: 40px
+		@media screen and ( max-width: 576px)
+			grid-template-columns: 1fr 
+			grid-template-rows: max-content
+			// align-items: start
+			
+			
+
+	&__logo
+		width: 166px
+		height: 192px
+		align-self: end
+		// justify-self: center
+		grid-column: 1 / 2
+		grid-row: 1 / 3
+		&>img
+			margin: 3px 0 0 3px
+		@media screen and ( max-width: 1200px)
+			grid-column: 1 / 2
+			grid-row: 1 / 2
+			align-self: center
+			width: 104px
+			height: 120px
+			margin: 0 0 40px 0
+
+
+	&-title
+		font-weight: bold
+		font-size: 18px
+		line-height: 23px
+		margin: 0 0 20px 0
+		text-transform: uppercase
+
+
+	&__list-wrap
+	
+		@media screen and ( max-width: 1200px)
+			margin: 0 0 60px 0
+		@media screen and ( max-width: 760px)
+			margin: 0 0 30px 0
+		// ALL CATEGORIES
+		&:nth-child(2)
+			grid-column: 2 / 3
+			grid-row: 1 / 3
+			@media screen and ( max-width: 1200px)
+				grid-column: 1 / 2
+				grid-row: 2 / 3
+			@media screen and ( max-width: 760px)
+				grid-column: 1 / 3
+				grid-row: 3 / 4
+		// ADDITIONAL INFORMATION
+		&:nth-child(3)
+			grid-column: 3 / 4
+			grid-row: 1 / 2
+			@media screen and ( max-width: 1200px)
+				grid-column: 2 / 3
+				grid-row: 2 / 3
+			@media screen and ( max-width: 760px)
+				grid-column: 1 / 3
+				grid-row: 4 / 5
+		// LEGAL INFORMATION
+		&:nth-child(4)
+			grid-column: 4 / 5
+			grid-row: 1 / 2
+			@media screen and ( max-width: 1200px)
+				grid-column: 3 / 4
+				grid-row: 2 / 3
+			@media screen and ( max-width: 760px)
+				grid-column: 1 / 3
+				grid-row: 5 / 6
+	&__list-title
+	&__socialnet
+		display: flex
+		grid-column: 3 / 5
+		grid-row: 2 / 3
+		align-self: end
+		@media screen and ( max-width: 1200px)
+			grid-column: 2 / 4
+			grid-row: 1 / 2
+			align-self: center
+			margin: 0 0 40px 60px
+		@media screen and ( max-width: 576px)
+			flex-wrap: wrap
+			grid-column: 1 /3
+			grid-row: 2 / 3
+			align-self: start
+			margin: 0 0 40px 0
+			// flex-direction: column
+			// justify-self: center
+	&__contacts
+		grid-column: 1 / 3
+		grid-row: 4 / 5
+		margin: 0
+		@media screen and ( max-width: 1200px)
+			grid-column: 1 / 2
+			grid-row: 5 / 6
+		@media screen and ( max-width: 992px)
+			grid-column: 1 / 4
+			grid-row: 5 / 6
+			margin: 0 0 60px 0
+		@media screen and ( max-width: 768px)
+			grid-column: 1 / 4
+			grid-row: 6 / 7
+			
+	&__form-wrap
+		grid-column: 3 / 5
+		grid-row: 4 / 5
+	
+		// margin: auto
+		@media screen and ( max-width: 1200px)
+			grid-column: 2 / 4
+			grid-row: 5 / 6
+			margin: 0 auto
+		@media screen and ( max-width: 992px)
+			grid-column: 1 / 4
+			grid-row: 6 / 7
+			margin: 0
+		@media screen and ( max-width: 768px)
+			grid-column: 1 / 4
+			grid-row: 7 / 8
+
+	&__form
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		max-width: 539px
+		border-radius: 0
+		// @media screen and ( max-width: 768px)
+		// 	max-width: 100%
+	&__form-title
+		margin: 0 0 34px 0 
+		@media screen and ( max-width: 576px)	
+
+			flex-basis: 100%
+	&__input
+		padding-top: 0.3rem
+		&-group
+			display: flex
+			flex-direction: column
+			flex-basis: 45%
+			margin-bottom: 3.2rem
+			&--full-width
+				flex-basis: 100%
+				margin-bottom: 2rem
+
+	&-logo__img
+
+	&__list-wrap
+
+
+
+	
+	&-title 	
+
+.list 
+	&__link
+		font-size: 14px
+		line-height: 160%
+		text-decoration: none
+		color: inherit
+	&-wrap 
+
+
+
+.socialnet
+	&__footer-title
+		margin: 0 45px 0 0
+		@media screen and ( max-width: 992px)
+			margin: 0 4.1% 0 0
+		@media screen and ( max-width: 576px)
+			flex-basis: 100%
+			margin: 0 0 20px 0
+	&__fb
+		margin: 0 12px 0 0
+	&__youtube
+		margin: 0 10px 0 0
+ 
+
+	&__text 
+		font-weight: bold
+		font-size: 18px
+		line-height: 23px
+	&__fb 
+
+	&__youtube 
+
+	&__inst 
+
+.contacts
+	font-size: 14px
+	line-height: 160%
+
+	&__footer-title
+		margin: 12px 0 25px 0
+	&__list
+		margin: 0 0 0 8px
+		&-item
+			margin: 0 0 20px 0
+	&__item-wrap
+		display: flex
+		align-items: start
+	&__icon
+		margin: 5px 20px 0 0 
+	&__subtitle 
+		display: block
+		margin: 0 0 22px 0
+	
+	&__adress
+		text-decoration: none
+		color: inherit
+	
+	&__list-tel
+
+
+
+	&__tel
+		&>a
+			text-decoration: none
+			color: inherit
+	
+	&__mail 
+		text-decoration: none
+		color: inherit
+
+// .test-textarea
+// 	width: 536px	
+// 	height: 123px
+// 	resize: none
+// 	outline: none	
+// 	overflow: auto
+// 	&::placeholder
+// 		color: $text-light
+// 	&::-moz-placeholder, :-moz-placeholder
+// 		opacity: 1
+
+
+	
+
+
+.footer__input
+	color: $text-color
+	margin: 0 0 15px 0
+	@media screen and ( max-width: 576px)
+		
+		width: 100%
+	&::placeholder
+		color: $text-light
+	&::-moz-placeholder, :-moz-placeholder
+		opacity: 1
+
+	&-message
+		height: 123px	
+		padding: 18px 0 0 23px	
+		border-radius: 4px	
+		margin: 0 0 22px 0
+		resize: none
+		outline: none	
+		overflow: auto
+		-moz-appearance: none	
+		width: 100%
+		&:placeholder
+			color: $text-light
+		&::-moz-placeholder, :-moz-placeholder
+			opacity: 1
+		@media screen and ( max-width: 576px)
+			margin: 0 0 15px 0
+	&-phone
+		width: 254px	
+		height: 50px
+		border-radius: 4px	
+	&-name
+		width: 254px	
+		height: 50px	
+		border-radius: 4px
+	&-requred
+		align-self: center
+		margin: 0  0 0
+		font-weight: bold	
+		font-size: 12px	
+		line-height: 15px	
+		@media screen and ( max-width: 576px)
+			flex-basis: 100%
+			margin: 0 0 15px 0
+
+			
+
+
+.footer__button
+	padding: 18px 65px
+	background-color: $primary
+	font-weight: bold
+	font-size: 12px
+	line-height: 15px
+	border-radius: 4px
+	color: $light
+	@media screen and ( max-width: 576px)
+		order: 4
+
+	
+	
+.footer-bottom
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	&__text
+		display: flex
+		@media screen and ( max-width: 576px)
+			margin: 0 0 10px 0
+
+
+		
+	&__item
+		margin: 0 10px 0 0	
+		
+	&__link
+		text-decoration: none 
+		color: $light
+		font-size: 12px
+		line-height: 15px
+		
+	&__img-pay
+
+		
+	&__pict 	
+	
+	
