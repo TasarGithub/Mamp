@@ -217,7 +217,7 @@
         margin: 0 40px;
     }
 
-    /*  Стили для нового слайдера  */
+    /*  пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ  */
     .owl-carousel{
         margin: 10px 0 0 0;
         width: 920px !important;
@@ -259,7 +259,7 @@
     }
 
 
- /* Стили для нового слайдера */
+ /* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 
     .owl-carousel_b_photos{
         margin: 30px 0 30px 0;
@@ -1797,7 +1797,7 @@ border-color: transparent transparent #cdaea0;
  }
 
 
-/*  СТИЛИ ДЛЯ СТРАНИЦЫ АНАЛОГОВ  */
+/*  пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ  */
 
 .section {
 margin-top: 10%;
@@ -1806,9 +1806,9 @@ margin-bottom: 3%;
 
 
  .grey_div_margin-right  {
-    /*height: 300px; /* Высота блока */
-    width: 400px; /* Ширина блока */
-/*background: #F8F8F9; /* Цвет фона,  */
+    /*height: 300px; /* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
+    width: 400px; /* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
+/*background: #F8F8F9; /* пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ,  */
 /*float: left;*/
 display:inline-block;
 vertical-align: top;
@@ -1817,17 +1817,17 @@ margin-bottom: 3%;
 margin-right: 100px;
 
 
-/*     padding-top: 3%; /* Отступ от текста слева  
-    padding-bottom: 3%;  Отступ от текста слева */
+/*     padding-top: 3%; /* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ  
+    padding-bottom: 3%;  пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
 
 /* margin-top: 3%;
 margin-bottom: 3%; */ 
 
  }
   .grey_div  {
-    /*height: 300px; /* Высота блока */
-    width: 400px; /* Ширина блока */
-/*background: #F8F8F9; /* Цвет фона,  */
+    /*height: 300px; /* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
+    width: 400px; /* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
+/*background: #F8F8F9; /* пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ,  */
 /*     padding-top: 3%; 
     padding-bottom: 3%;*/
     
@@ -1840,10 +1840,10 @@ vertical-align: top;
 
  }
 .LemonChiffon_div  {
-    height: 200px; /* Высота блока */
-    width: 100%; /* Ширина блока */
-    /* padding-left: 15px; /* Отступ от текста слева */ 
-    background: #F7E5AA;  /*FFF09A; /* Цвет фона,  */
+    height: 200px; /* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
+    width: 100%; /* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
+    /* padding-left: 15px; /* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */ 
+    background: #F7E5AA;  /*FFF09A; /* пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ,  */
  }
  
  
@@ -1854,7 +1854,7 @@ vertical-align: top;
     /*height: 200px; */
     width: 100%; 
     padding: 10px;
-    background: #ffd0d0; /*F7E5AA; /*FFF09A; /* Цвет фона,  */
+    background: #ffd0d0; /*F7E5AA; /*FFF09A; /* пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ,  */
 margin-top: 3%;
 margin-bottom: 3%;
  }
@@ -1943,7 +1943,7 @@ float: left;
         font-family: ProximaNovaBold_4;
 /*width: 100%; */
 padding: 10px;
-background: #ffd0d0; /*F7E5AA; /*FFF09A; /* Цвет фона,  */
+background: #ffd0d0; /*F7E5AA; /*FFF09A; /* пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ,  */
 margin-top: 2%;
 margin-bottom: 2%;
 }
@@ -1971,7 +1971,7 @@ width: 100%;
 
 
 .clear_left {
-     /* Отмена обтекания */
+     /* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 clear: both;
 display: block;
 height: 0;
@@ -1980,7 +1980,7 @@ overflow: hidden;
 font-size: 0;
    }
 
-/*конец для стр аналогов*/
+/*пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
 
 .span_arial{
 font-family:ProximaNovaReg,helvetica,sans-serif;
@@ -1999,7 +1999,7 @@ text-align: center;
 }
 
 
- /* кнопка для внутреннего применения */
+ /* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 .button-in {
         background:  url(/public/images/bg-1.png) no-repeat center;   
 position: relative;
@@ -2047,16 +2047,31 @@ position: relative;
     .button-in .btn-secondary:hover{
         opacity: 0.9;
 }
-/* конец кнопки*/
-/* ссылки в таблице моделей теплообменников*/
+/* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ*/
+/* пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
 
     .td-vts{
         font-size: 16px; text-decoration: underline;
     }
-/* конец ссылки в таблице моделей теплообменников*/
+/* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
 
 /**/
 .p-150percent{
 	font-size: 150%;
 }
+
+.header__header-email{
+	padding: 24px 0 0 0;
+	/* margin: 0 0 0 20px */
+	/*15px 0 30px;*/
+	
+}
+
+.header__header-email>a{
+	/* padding: 40px 20px; */
+	color: black;
+	font-weight: bold;
+	font-size: 25px;
+}
+	
 /**/
