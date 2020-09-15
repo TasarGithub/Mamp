@@ -1,0 +1,237 @@
+// .page
+// 	&__navbar-bottom
+// 		padding: 1px 1px 1px 1px
+
+	
+.page-container 
+	
+.hero
+	padding: 57px 0 48px
+	background-repeat: no-repeat 
+	background-position: center
+	background-size: cover
+	
+
+	&-body
+		position: relative
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		min-height: 467px
+		height: 100%
+		color: $light
+		
+	
+	&__hero-top
+		display: flex
+		justify-content: space-between
+		align-items: center
+	
+	&__hero-top
+
+
+
+	&__container
+
+
+		
+	&__title
+		max-width: 640px
+		font-family: Roboto Slab
+		font-style: normal
+		font-weight: bold
+		font-size: 55px
+		line-height: 70px
+		margin: 0 0 31px 0
+		color: $light
+		@media screen and ( max-width: 576px)
+			font-size: 40px
+			line-height: 50px
+			margin: 0 0 30px 0
+
+	&__subtitle
+		margin: 0 0 60px 0
+		opacity: 0.6
+		max-width: 556px
+		font-size: 18px
+		line-height: 30px
+		@media screen and ( max-width: 576px)
+			margin: 0 0 35px 0
+
+
+	&__favorit
+		position: absolute
+		left: -9.8%
+		top: 19.1%
+		border-width: 20px 11px 7px
+		border-radius: 4px 4px 0 0
+		border-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.4) transparent rgba(255, 255, 255, 0.4)
+		@media screen and ( max-width: 1200px)
+			left: 0
+			top: -35px
+			border-width: 13px 8px 5px;
+	&__category
+		color: $blue-light
+		@media screen and ( max-width: 576px)
+			margin: 0 0 30px 0
+
+	&-top
+		&__wrap
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin: 0 0 47px 0
+			width: 100%
+			@media screen and ( max-width: 576px)
+				flex-wrap: wrap
+
+		&__actions
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin: 0 5px 0 0
+			@media screen and ( max-width: 576px)
+				justify-content: flex-end
+				flex: 1 1 100%
+
+		&__nav
+			display: flex
+			justify-content: space-between
+			align-items: center
+			@media screen and ( max-width: 576px)
+				justify-content: flex-end
+				flex: 1 1 auto
+
+		&__back
+			display: flex
+			justify-content: space-between
+			align-items: center
+			
+			margin: 0 30px 0  0
+		&__img-home
+			width: 20px
+			height: 20px
+			margin: 0  5px 0  0
+
+		&__prev
+			display: flex
+			justify-content: space-between
+			align-items: center
+			
+			margin: 0  20px 0  0
+
+		&__img-prev
+			margin: 0  5px 0  0 
+
+		&__next
+			display: flex
+			justify-content: space-between
+			align-items: center
+			
+
+		&__img-next
+			margin: 0   0  0 5px
+
+	&__hero-bottom
+		display: flex
+		align-items: center
+		align-self: start
+		@media screen and ( max-width: 576px)
+			flex-wrap: wrap
+
+	&-bottom
+		display: flex
+		// justify-content: space-between
+		align-items: center
+		// max-width: 396px
+		//width: 100%
+		font-size: 12px
+		line-height: 15px
+		&__margin-media
+			@media screen and ( max-width: 576px)
+				margin: 0 15px 20px 0
+				
+
+		
+		&__clock
+			display: flex
+			// justify-content: space-between
+			align-items: center
+			opacity: 0.85
+			margin: 0 23px 6px 0
+			flex: 0 0 auto
+			@media screen and ( min-width: 992px)
+				&:hover
+					opacity: 1
+			&>span
+				margin: 0  0 3px 0 
+
+
+		&__img-clock 
+			margin: 0  5px 0  0
+
+		&__like
+			opacity: 0.55
+			margin: 0  20px 9px  0
+			flex: 0 0 auto
+			@media screen and ( min-width: 992px)
+				&:hover
+					opacity: 1
+			&>img
+				max-width: 15px
+				max-height: 15px
+				width: 100%
+				height: 100%
+			
+
+
+		&__comment
+			opacity: 0.55
+			margin: 0  30px 9px  0
+			@media screen and ( min-width: 992px)
+				&:hover
+					opacity: 1
+			&>img
+				max-width: 15px
+				max-height: 15px
+				width: 100%
+				height: 100%
+
+		&__share
+			margin: -1px 0 10px  0	
+			font-size: 14px
+			line-height: 20px
+			// max-width: 143px
+			@media screen and ( min-width: 992px)
+				&:hover
+					background-color: rgba(147, 150, 153, 0.4)
+			@media screen and ( max-width: 576px)
+				flex: 0 0 100%
+				margin: 0 180px 0 0
+				// max-width: 100px
+				height: 30px
+				padding: 6px 0
+				font-size: 11px
+				
+			&>img
+				margin: 0 10px 0 0
+		
+
+
+
+
+.share
+	display: flex
+	justify-content: center
+	align-items: center
+	// max-width: 143px
+	// width: 100%
+	height: 40px
+	padding: 10px 26px 10px 19px
+	background-color: transparent
+	color: $light
+	border-radius: 20px
+	text-decoration: none
+	border: 1px solid $light
+	
+	

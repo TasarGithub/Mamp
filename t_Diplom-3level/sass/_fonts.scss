@@ -1,0 +1,51 @@
+@font-face {
+	font-family: 'Lato';
+	// src: url('Lato-Regular.eot');
+	src: local('Lato Regular'), local('Lato-Regular'),
+			// url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/Lato-Regular.woff') format('woff'),
+			url('../fonts/Lato-Regular.woff2') format('woff2');
+			// url('../fonts/Lato-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Lato';
+	// src: url('Lato-HeavyItalic.eot');
+	src: local('Lato Heavy Italic'), local('Lato-HeavyItalic'),
+			// url('../fonts/Lato-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/Lato-HeavyItalic.woff') format('woff'),
+			url('../fonts/Lato-HeavyItalic.woff2') format('woff2');
+			// url('../fonts/Lato-HeavyItalic.ttf') format('truetype');
+	font-weight: 900;
+	font-style: italic;
+	font-display: swap;
+} 
+
+@font-face {
+	font-family: 'Lato';
+	// src: url('Lato-Heavy.eot');
+	src: local('Lato Heavy'), local('Lato-Heavy'),
+			// url('../fonts/Lato-Heavy.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/Lato-Heavy.woff') format('woff'),
+			url('../fonts/Lato-Heavy.woff2') format('woff2');
+			// url('../fonts/Lato-Heavy.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roboto Slab';
+	// src: url('RobotoSlab-Bold.eot');
+	src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'),
+		// url('../fonts/RobotoSlab-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/RobotoSlab-Bold.woff') format('woff'),
+		url('../fonts/RobotoSlab-Bold.woff2') format('woff2');
+		// url('../fonts/RobotoSlab-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+} 

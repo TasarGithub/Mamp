@@ -1,0 +1,178 @@
+.footer
+	padding: 35px 0 55px 0
+	@media screen and ( max-width: 768px)
+		padding: 20px 0 30px 0
+		
+	&__container 
+
+
+	&__footer-middle
+		margin: 0 0 42px 0
+
+
+	&__footer-top
+		margin: 0 0 40px 0
+
+	&-top
+		display: flex
+		@media screen and ( max-width: 1200px)
+			flex-wrap: wrap
+
+
+		&-item
+			max-width: 195px
+			width: 100%
+			border-top: 6px solid
+			margin: 0 0 25px 0
+			&:last-child
+				margin: 0
+			@media screen and ( max-width: 1200px)
+				// &:nth-child(1),&:nth-child(2),&:nth-child(3)
+				flex: 0 0 33.33%
+				max-width: 100%
+				font-size: 18px
+				line-height: 25px
+			@media screen and ( max-width: 576px)
+				flex: 0 0 45%
+			// @media screen and ( max-width: 400px)
+			// 	flex: 0 0 100%
+
+
+			&:nth-child(1)
+				border-top-color: $red
+			&:nth-child(2)
+				border-top-color: $purple-middle
+			&:nth-child(3)
+				border-top-color: $blue-light
+			&:nth-child(4)
+				border-top-color: $yellow
+			&:nth-child(5)
+				border-top-color: $green
+			&:nth-child(6)
+				border-top-color: $secondary
+				max-width: 165px
+				width: 100%
+				// flex: 0 0 165px
+
+			
+
+		&-item__title 
+			font-size: 14px
+			font-weight: bold
+			line-height: 20px
+			margin: 30px 0 26px 0
+			@media screen and ( max-width: 1200px)
+				font-size: 18px
+				line-height: 25px
+
+		&-list 
+
+			&__item
+				margin: 0 0 19px 0
+				&:last-child
+					margin: 0
+
+			&__link
+				color: $text-color
+				@media screen and ( max-width: 400px)
+					font-size: 15px
+
+
+.logo-circle
+	width: 50px
+	height: 50px
+
+
+.UM 
+
+
+
+.socialnet
+	display: flex
+	align-items: center
+	justify-content: space-between
+	max-width: 205px
+	width: 100%
+	&-item
+		width: 40px
+		height: 40px
+	&__fb 
+
+	&__twitter 
+
+	&__youtube 
+
+	&__inst 
+
+.footer-middle
+	padding: 30px 0 9px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	border-top: 1px solid $grey-for-border
+	border-bottom: 1px solid $grey-for-border
+	@media screen and ( max-width: 992px)
+		flex-wrap: wrap
+
+	&__logo-circle 
+
+		margin: 0 30px 10px  0
+
+	&-menu
+		display: flex
+		align-items: center
+		// justify-content: space-between
+		max-width: 581px
+		width: 100%
+
+
+
+
+	&__footer-middle-menu
+		margin: 0 0 10px 0
+		@media screen and ( max-width: 768px)
+			margin: 0 0 25px 0
+
+	&-list
+		display: flex
+		justify-content: space-between
+		align-items: center
+		max-width: 501px
+		width: 100%
+		@media screen and ( max-width: 576px)
+			flex-wrap: wrap
+			// flex: 0 0 50%
+	
+		
+		
+
+	&__item
+		margin: 0 10px 10px 0
+		text-align: left
+		@media screen and ( max-width: 576px)
+			flex: 0 0 40%
+		@media screen and ( max-width: 490px)
+			flex: 0 0 100%
+
+	&__link
+		font-weight: bold
+		letter-spacing: 0.5px
+		text-transform: uppercase
+		color: $text-black
+
+	&__socialnet 
+		margin: 0 0 20px 0
+
+.footer-bottom 
+	display: flex
+	justify-content: space-between
+	align-items: center
+	color: $text-light
+	@media screen and ( max-width: 992px)
+		flex-wrap: wrap
+
+	&__description 
+		max-width: 750px
+		margin: 0 0 25px 0
+		line-height: 20px
+	&__caption

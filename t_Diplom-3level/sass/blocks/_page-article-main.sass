@@ -1,0 +1,434 @@
+.art-main
+	padding: 60px 0 60px 0
+
+
+	&-slider
+		&__wrap
+			border-radius: 10px
+			border: 1px solid $grey-for-border 
+			overflow: hidden
+			margin: 0 0 45px 0
+
+		&__bottom
+			display: flex
+			justify-content: space-between
+			align-items: center
+			min-height: 66px
+			width: 100%
+			max-width: 100%
+			@media screen and ( max-width: 576px)
+				font-size: 12px
+				line-height: 15px
+		&__image-text
+			max-width: 262px
+			width: 100%
+			border-left: 1px solid $grey-for-border 
+			min-height: 66px
+			padding: 0 0 0 31px
+			@media screen and ( max-width: 576px)
+				flex: 1 1 45%
+				font-size: 12px
+				line-height: 15px
+				padding: 0 0 0 10px
+				&>img
+					width: 25px
+					height: 25px
+
+
+		&__description
+			padding: 0 0 0 34px
+			@media screen and ( max-width: 576px)
+				flex: 1 1 55%
+				padding: 0 7px 0 7px
+		&__img
+			width: 100%
+			height: 100%
+			&>img
+				width: 100%
+				height: 100%
+
+
+.litter-m
+		float: left
+
+		width: 96px
+		height: 75px
+		@media screen and ( max-width: 400px)
+			width: 24vw
+			height: 18vw
+
+
+
+
+.paragraph
+	max-width: 623px
+	font-size: 18px
+	line-height: 30px
+	&__margin
+		margin: 0 0 35px 0
+	@media screen and ( max-width: 400px)
+		font-size: 14px
+		line-height: 25px
+
+.part-1
+	&__litter-m
+		margin: 6px 10px 0px 0
+		@media screen and ( max-width: 400px)
+			margin: 10px 0px 0px 0
+	&__wrap
+		display: flex
+		justify-content: space-between
+		// align-items: center
+		margin: 0 0 10px 0
+		@media screen and ( max-width: 768px)
+			flex-direction: column-reverse
+
+
+	&__author-block
+		margin: -122px 0 0 0
+		@media screen and ( max-width: 992px)
+			margin: 0
+			flex: 1 1 40%
+		@media screen and ( max-width: 768px)
+			align-self: center
+			margin: 0 0 30px 0
+		// @media screen and ( max-width: 576px)
+			
+
+
+
+		@media screen and ( max-width: 992px)
+			margin: 0 0 15px 0
+			flex: 1 1 60%
+		@media screen and ( max-width: 768px)
+			flex: 1 1 100%
+			max-width: 100%
+	
+
+	&__post-h2
+		display: block
+		// padding: 30px 0 0 0
+		margin: 0 0 30px 0
+
+
+	
+	&__begin
+
+
+.part-2
+	&__btn-category 
+		margin: 0 0 60px 0
+		@media screen and ( max-width: 576px)
+			margin: 0 0 30px -10px
+			flex-wrap: wrap
+			justify-content: flex-start
+	&__hr
+		max-width: 653px
+		width: 100%
+		height: 1px
+		background-color: $grey-sky
+		border: none
+		margin: 0 auto 0 0
+
+	&__grid
+		display: flex
+		justify-content: space-between
+		// align-items: center
+		margin: 0 0 20px 0
+		@media screen and ( max-width: 992px)
+			flex-wrap: wrap
+
+	&__wrap
+		margin: 0 20px 0 0
+		@media screen and ( max-width: 992px)
+			margin: 0 0 0 0
+	
+
+	&__insert
+		padding: 35px 0 35px 0
+		display: flex
+		justify-content: space-between
+		// align-items: center
+		
+		max-width: 590px
+		width: 100%
+		// background: url('../img/page/quote.svg') no-repeat 
+		// background-size: 70px 70px
+		// background-position: -20px -20px
+		position: relative
+		z-index: 10
+	&__insert-author-wrap
+		display: flex
+		flex-direction: column
+		// justify-content: space-between
+		align-items: left
+		&>img
+			height: 60px
+			width: 60px
+			margin: 0 0 15px 0
+	&__it-text
+		
+		padding: 0
+		&>.text-line
+			color: $text-black
+			opacity: 0.5
+			&:nth-child(1)
+				opacity: 0.7
+		
+
+	&__quote
+		position: absolute
+		z-index: 1
+		top: 15px
+		left: -20px
+		opacity: 0.75
+		@media screen and ( max-width: 768px)
+			width: 50px
+			height: 50px
+			left: -5px
+			top: 20px
+
+	&__insert-text
+		max-width: 458px
+
+		font-family: Roboto Slab
+		font-style: normal
+		font-weight: bold
+		font-size: 25px
+		line-height: 30px
+		position: relative
+		z-index: 10
+		color: $text-black
+
+		
+.flex-100
+	flex: 0 0 100%
+
+.author-block
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	align-content: flex-start
+	// align-items: center
+	max-width: 263px
+	width: 100%
+	min-height: 322px
+	height: 100%
+	@media screen and ( max-width: 768px)
+		max-width: 100%
+
+		
+
+	&>*
+		text-align: center
+
+	
+	
+	&__img
+		width: 90px
+		height: 90px
+		border-radius: 50%
+		overflow: hidden
+		// max-width: fit-content
+		margin: 0 0 15px 0
+		flex: 0 0 auto
+		@media screen and ( max-width: 576px)
+			flex: 0 0 100%
+			max-width: 70px
+			height: auto
+		&>img
+			height: 100%
+			width: 100%
+
+	// &__name, 	&__profi, &__number-articles
+	// 	@media screen and ( max-width: 768px)
+	// 		margin: 0 0 15px 0
+
+	&__name
+		margin: 0 0 8px 0
+
+	&__profi
+		margin: 0 0 19px 0
+		color: $text-color
+		
+
+
+	&__number-articles
+		margin: 0 0 26px 0
+		color: $text-black
+		font-weight: bold
+
+
+	&__socnet
+		margin: 0 0 34px 0
+		max-width: 140px
+		width: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+		& .socialnet__item
+			margin: 0 5px
+			
+		@media screen and ( max-width: 576px)
+			flex-wrap: wrap
+			margin: 0 auto 34px
+			justify-content: center
+			& .socialnet__item
+				margin: 2px
+		
+
+	&__follow
+		font-weight: bold
+		color: $text-black
+
+	&__hr
+		margin: 0 0 15px 0
+
+
+.swiper-article
+	&-button
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		width: 60px
+		height: 60px
+		color: rgba(255, 255, 255, 0.8)
+		z-index: 10
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		border: none
+		background-color: transparent
+		z-index: 20
+		@media screen and ( min-width: 992px)
+			cursor: pointer
+		@media screen and ( max-width: 576px)
+			width: 40px
+			height: 40px
+		@media screen and ( max-width: 320px)
+			width: 30px
+			height: 30px
+		&-prev
+			left: 3%
+			background-image: url(../img/arrow-prev.svg)
+		&-next
+			right: 3%
+			background-image: url(../img/arrow-next.svg)
+
+.views
+	&__number 
+
+// .part2__right-block
+// 	margin: 134px 0  0
+// 	@media screen and ( max-width: 992px)
+// 		margin: 0 0 20px 0
+
+.right-block
+	max-width: 263px
+	min-height: 430px
+	width: 100%
+	height: 100%
+	&__margin
+		margin: 134px 0  0
+		@media screen and ( max-width: 992px)
+			margin: 0 0 20px 0
+
+	&__title 
+		font-family: Roboto Slab
+		font-style: normal
+		font-weight: bold
+		font-size: 20px
+		line-height: 25px
+		color: $text-black
+		margin: 0 0 20px 0
+
+	&__img
+		border-radius: 10px
+		overflow: hidden
+		max-width: 263px
+		height: 180px
+		margin: 0 0 11px 0
+		&>img
+			width: 100%
+			height: 100%
+
+	&__subtitle
+		font-family: Roboto Slab
+		font-style: normal
+		font-weight: bold
+		font-size: 16px
+		line-height: 25px
+		margin: 0 0 8px 0
+
+	&__text
+		margin: 0 0 20px 0
+		font-size: 14px
+		line-height: 20px
+
+	&__wrap-bottom
+		display: flex
+		justify-content: space-between
+		align-items: center
+		max-width: 100px
+		width: 100%
+
+	&__views
+		display: flex
+		justify-content: space-between
+		align-items: center
+		font-size: 12px
+		line-height: 15px
+		color: $text-light
+		&>img
+			width: 15px
+			height: 15px
+			opacity: 0.7
+			margin: 0 3px 0 0
+		
+	&__comment
+		opacity: 0.7
+
+
+.art-main__btn-category 
+
+.btn-category 
+	display: flex
+	justify-content: space-between
+	align-items: center
+	max-width: 433px
+	width: 100%
+	min-height: 30px
+	font-size: 14px;
+	font-weight: bold
+	line-height: 20px
+	color: $text-black
+
+	
+	&-item
+		display: flex
+		justify-content: center
+		align-items: center
+		
+		border-radius: 5px
+		border: 1px solid $grey-for-border
+		padding: 4px 14px
+		@media screen and ( max-width: 576px)
+			margin: 10px
+
+
+
+
+	&__link
+		color: $text-black
+
+
+
+
+
+
+
+
+
+
+
+

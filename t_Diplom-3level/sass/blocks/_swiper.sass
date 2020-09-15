@@ -1,0 +1,45 @@
+.swiper
+
+	&-slide
+		&-active
+			margin-right: 1px
+			height: auto
+
+
+	&-button
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		width: 30px
+		height: 30px
+		color: rgba(255, 255, 255, 0.8)
+		z-index: 10
+		background-size: 10px
+		background-position: center
+		background-repeat: no-repeat
+		border: none
+		cursor: pointer
+		background-color: transparent
+		z-index: 20
+		&--prev
+			left: 2.57%
+			background-image: url('../img/slider/arrow-prev.svg')
+		&--next
+			right: 2.57%
+			background-image: url('../img/slider/arrow-next.svg')
+		&--reviews-prev
+			left: 0.1%
+			background-image: url('../img/reviews/arrow-dark-prev.svg')
+			@media screen and ( max-width: 767px)
+				top: 31px
+				left: 50%
+				transform: translateX(-50%)
+				margin-left: -29%
+		&--reviews-next
+			right: 0.1%
+			background-image: url('../img/reviews/arrow-dark-next.svg')
+			@media screen and ( max-width: 767px)
+				top: 31px
+				right: 50%
+				transform: translateX(50%)
+				margin-right: -29%

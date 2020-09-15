@@ -1,0 +1,324 @@
+.careers 
+	background-color: $primary
+	
+	&__container
+		padding: 60px 0
+		
+
+	// &-small
+	// 	&:nth-child(1)
+
+			
+	&__grid-main
+		width: 100%
+		grid-template-columns: repeat(4, 263px)
+		grid-template-rows: repeat(3, 170px)
+		grid-column-gap: 30px
+		grid-row-gap: 30px
+		// height: 690px
+		@media screen and ( max-width: 1200px)
+			grid-template-columns: 1fr 1fr
+			grid-template-rows: minmax(min-content, 570px) auto auto //minmax(370px, max-content) minmax(170px, max-content)
+			// grid-template-columns: repeat(2, 1fr)
+			// grid-template-rows:  repeat(5, 1fr)
+			justify-content: space-between
+			align-items: start
+		// @media screen and ( max-width: 992px)
+		// 	//grid-template-rows: minmax(auto, max-content) repeat(4, 1fr)
+		// 	grid-template-rows: minmax(min-content, max-content) repeat(4, minmax(min-content, max-content))
+		@media screen and ( max-width: 576px)
+			// grid-template-columns: 1fr
+			grid-template-rows: auto
+			// grid-row-gap: 20px
+			// grid-column-gap: unset
+			
+	&-small-1
+		grid-column: 3/4
+		grid-row: 3/4
+		@media screen and ( max-width: 1200px)
+			grid-column: 1/2
+			grid-row: 3/4
+		@media screen and ( max-width: 576px)
+			grid-column: 1/3
+			// grid-row: initial
+
+	&-small-2
+		grid-column: 3/5
+		grid-row: 3/4		
+		@media screen and ( max-width: 1200px)
+			grid-column: 2/3
+			grid-row: 3/4
+		@media screen and ( max-width: 576px)
+			grid-column: 1/3
+			// grid-row: initial
+
+	&-slider
+		max-width: 100%
+		height: 100%
+		width: 100%
+		grid-column: 1/3
+		grid-row: 1/2
+		position: relative
+		@media screen and ( max-width: 1200px)
+			grid-column: 1/3
+			grid-row: 1/2
+			max-width: 100%
+			align-self: start
+		// @media screen and ( max-width: 576px)
+		// 	grid-column: 1
+		// 	// grid-row: initial
+
+		&__swiper-container
+			border-radius: 10px
+			@media screen and ( max-width: 1200px)
+				height: 570px
+			@media screen and ( max-width: 576px)
+					height: 100%
+		&__swiper-slide
+			border-radius: 10px
+		&__template
+			position: absolute
+			z-index: 2
+			color: $light
+		&__mark-hot
+			display: flex
+			justify-content: center
+			align-items: center
+			top: 18px
+			left: 18px
+			width: 45px
+			height: 25px
+			background-color: $red
+			border-radius: 3px
+			font-size: 12px
+			line-height: 15px
+		&__author
+			top: 50px
+			left: 50%
+			transform: translateX(-50%)
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			align-items: center
+			min-height: 90px
+			max-width: 160px
+			&>.image-text__text>.text-line
+				text-align: center
+		&__text-line-1
+			font-size: 14px
+			line-height: 20px
+			margin: 4px 0 2px 0
+		&__text-line-2
+			font-size: 12px
+			line-height: 15px
+		&__post-h2
+			top: 171px
+			left: 50%
+			transform: translateX(-50%)
+			text-align: center
+			font-size: 40px
+			line-height: 50px
+			max-width: 455px
+			width: 100%
+			@media screen and ( max-width: 576px)
+				width: 90%
+				top: 151px
+		&__number
+			opacity: 0.6
+		&__btn
+			// display: block
+			top: 364px
+			left: 50%
+			transform: translateX(-50%)
+			max-width: 185px
+			width: 100%
+			justify-content: space-around
+			padding: 12px 23px 10px 18px
+			&>.btn-readmore__text
+				margin: 0
+			@media screen and ( max-width: 576px)
+				top: 230px
+				max-width: 130px
+				// height: 30px
+				padding: 6px 10px
+				font-size: 11px
+			@media screen and ( max-width: 320px)
+				top: 210px
+		&__img-wrap
+			background-repeat:  no-repeat
+			background-position: center
+			background-size: cover
+			&>img
+				width: 100%
+				height: 100%
+				opacity: 0
+
+
+	&-big
+		position: relative
+		grid-column: 3/5
+		grid-row: 1/2
+		overflow: hidden
+		// background: url('../img/careers/girl.png') no-repeat
+		// background-size: 49%
+		// background-position: 251px 23px
+		// background-origin: border-box
+
+		background-color: $grey-sky
+		border-radius: 10px
+		// grid-row: 1/3
+		// grid-column: 1/4
+		padding: 15px 0 20px 0
+		// display: grid
+		// grid-template-columns: minmax(auto, 261px) auto
+		// grid-template-rows: 300px auto
+		max-width: 555px
+		height: 370px
+		@media screen and ( max-width: 1200px)
+			grid-column: 1/3
+			grid-row: 2/3
+			max-width: 100%
+		@media screen and ( max-width: 620px)
+			background-position: 251px 73px
+		@media screen and ( max-width: 470px)
+			background-position: 211px 153px
+
+		@media screen and ( max-width: 576px)
+			min-height: auto
+			grid-column: 1/3
+			height: auto
+			padding: 15px 0 20px 0
+			// grid-row: initial
+
+			// background-position: calc(251px - 3vw) calc(50px - 3vw)
+			// background-size: 150px
+
+		&__post-h2
+			color: $text-black
+			margin: 0 0 14px 0
+			@media screen and ( max-width: 1200px)
+				font-size: 30px
+				line-height: 40px				
+				margin: 0 0 24px 0
+			@media screen and ( max-width: 992px)
+				font-size: 20px
+				line-height: 25px				
+				margin: 0 0 14px 0
+
+		&__post-text
+			max-width: 213px
+			font-size: 14px
+			line-height: 20px
+			margin: 0 0 25px 0
+			@media screen and ( max-width: 1200px)
+				max-width: 580px
+				font-size: 20px
+				line-height: 30px
+			@media screen and ( max-width: 992px)
+				max-width: 390px
+				width: 45vw
+				font-size: 20px
+				line-height: 30px	
+			@media screen and ( max-width: 768px)
+				max-width: 380px
+				font-size: 20px
+				line-height: 30px		
+			@media screen and ( max-width: 576px)
+				max-width: 50vw
+				font-size: 14px
+				line-height: 20px
+
+		&__body
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			max-width: 280px
+			//min-height: 314px
+			padding: 22px 0 0 35px
+			@media screen and ( max-width: 1200px)
+				max-width: 680px
+			@media screen and ( max-width: 992px)
+				max-width: 440px
+			@media screen and ( max-width: 768px)
+				max-width: 480px
+			@media screen and ( max-width: 576px)
+				max-width: 350px
+			@media screen and ( max-width: 320px)
+				padding: 22px 0 0 25px
+				max-width: 210px
+
+
+		&__btn
+		
+		&__post-category
+			margin: 0 0 21px 0
+
+	&-big__img
+		position: absolute
+		bottom: -4px
+		right: 32px
+		@media screen and ( max-width: 768px)
+			right: -14%
+			left: 72%
+		@media screen and ( max-width: 576px)
+			right: -14%
+			left: 72%
+		@media screen and ( max-width: 480px)
+			right: -10%
+			left: 65%
+		@media screen and ( max-width: 370px)
+			right: -15%
+			left: 75%
+		
+		&>img
+			height: 100%
+			width: 100%
+			@media screen and ( max-width: 576px)
+				height: 80%
+				width: 80%
+// .careers-swiper
+// 	height: 100%
+// 	width: 100%
+
+// .swiper-wrapper.careers__swiper-wrapper
+// 	height: 100%
+// 	width: 100%
+
+.swiper
+	&-pagination
+		bottom: 12px
+		&-bullet
+			width: 8px
+			height: 8px
+			// margin: 0 9px 0 9px
+			background-color: rgba($light, 0.9)
+			// position: relative
+			border-radius: 100%
+			&-active
+				background-color: $light
+				&::after
+					display: block
+					content: ""
+					width: 20px
+					height: 20px
+					background-color: transparent
+					border-radius: 100%
+					border: 2px solid #ffffff
+					transform: translate(-30%,-30%)
+					
+					// // position: absolute
+					// top: -6px
+					// left: -6px
+				// &::before
+				// 	content: ""
+				// 	background-color: transparent
+				// 	border-radius: 12px
+.swiper-container-horizontal>.swiper-pagination-bullets
+	// width: auto
+	bottom: 47px
+	@media screen and ( max-width: 576px)
+		bottom: 10px
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+	margin: 0 8.5px
+
+

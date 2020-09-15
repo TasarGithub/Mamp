@@ -1,0 +1,199 @@
+*, *::before, *::after
+  box-sizing: border-box
+
+html 
+  font-size:  14px
+body
+	font-family: 'Lato', sans-serif
+	font-size: 1rem
+	color: $text-color
+	padding: 50px 0 0
+	// @media screen and ( max-width: 767px)
+	// 	padding: 110px 0 0
+
+.body__lock
+	overflow: hidden
+	// @media screen and ( max-width: 767px)
+	// 	overflow: hidden
+.fixed 
+	position: fixed //*позицианируем чтобы исчез скролл*/
+	width: 100%  //*что бы верстка не складывалась по ширине*/
+
+
+// [data-aload] 
+// 	background-image: none !important
+
+img 
+  max-width: 100%
+
+a
+	text-decoration: none
+	color: inherit
+
+input
+  outline-style: none
+
+h1, h2, h3, h4, strong
+	margin: 0
+	font-weight: 400
+
+
+
+
+ul
+	list-style-type: none
+	padding: 0
+	margin: 0
+
+
+p, span,
+	padding: 0
+	margin: 0
+
+span, button, strong
+	//word-break: break-all
+
+hr
+	border: none
+	margin: 0
+
+
+.inactive
+	display: none
+
+button
+	outline: none
+	border: none
+	background-color: transparent
+	@media screen and ( min-width: 992px)
+		&:hover
+			cursor: pointer
+
+
+
+
+
+
+
+.form--radius
+	overflow: hidden
+	border-radius: 6px
+
+.invalid
+  color: tomato
+
+input
+  &.invalid
+    border-bottom: 1px solid tomato
+
+div[class$='input-group']
+  position: relative
+
+div[id$='-error']
+  position: absolute
+  right: 0
+  top: -15px
+
+.form
+	position: relative
+	display: flex
+	// overflow: hidden
+	// border-radius: 6px
+
+	&-input
+		// background-color: $secondary
+		// width: 290px
+		font-size: 14px
+		line-height: 20px
+		border: none
+		&::placeholder
+			color: $text-light
+		&::-moz-placeholder, :-moz-placeholder
+			opacity: 1
+		&--290
+			width: 290px
+
+	&-button
+		height: 100%
+		border: none
+		padding: 18px 65px
+		background-color: $primary
+		font-weight: bold
+		font-size: 12px
+		line-height: 15px
+		color: $light
+
+		
+
+	&-message
+		height: 123px	
+		padding: 18px 18px 0 23px	
+		border-radius: 4px	
+		resize: none
+		outline: none	
+		overflow: auto
+		-moz-appearance: none	
+		width: 100%
+		font-size: 12px
+		line-height: 15px
+		color: $text-color
+
+		//background-color: $light
+		&::placeholder
+			color: $text-light
+		&::-moz-placeholder, :-moz-placeholder
+			opacity: 1
+	&-requred
+		font-weight: bold	
+		font-size: 12px	
+		line-height: 15px
+		align-self: center
+	&-bottom-wrap
+		display: flex
+		justify-content: space-between
+		width: 100%
+
+
+.back
+	display: block
+	text-decoration: none 
+	color: $text-color
+	margin-top: 30px
+.back-wrap
+	display: flex
+	align-items: center
+.back__text
+	margin: 0 0 0 10px
+
+
+.responsive-img
+	display: block
+	max-width: 100%
+	height: auto
+
+
+.responsive-img-ofcontain
+	display: block
+	max-width: 100%
+	height: 100%
+	object-fit: contain
+
+.responsive-img-ofcover
+	display: block
+	max-width: 100%
+	height: 100%
+	object-fit: contain
+
+.grid
+	display: grid
+
+.bcg-img-768
+	background-position: 100% 5%
+	background-size: 70px
+	background-repeat: no-repeat
+
+.post-link
+	display: block
+	text-decoration: none
+	color: inherit
+
