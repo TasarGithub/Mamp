@@ -578,7 +578,7 @@ line-height: 1.0;
         width: 1000px;
     }
     .container {
-        width: 1000px;
+        max-width: 1140px;
     }
     .phone_b {
         margin-top: 18px;

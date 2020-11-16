@@ -1,0 +1,116 @@
+.body__header {
+	margin: 0px 0px 151px 0px;
+}
+
+
+.logo {
+	width: 270px;
+	height: 95px;
+	background: url(../images/logo-dark-1.jpg) no-repeat left / 100px auto;
+	/* float: left; */
+	padding: 0 0 0 120px;
+	margin: 20px 0 0 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	color: #333;
+	font-size: 15px;
+	line-height: 1.0;
+	padding-left: 120px;
+
+}
+
+.logo:hover {
+	text-decoration: none;
+	// color: #333;
+}
+
+
+
+
+
+.header{
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+
+	&__column{
+		flex: 1 1 25%
+	}
+
+	&__column:nth-child(2) {
+		flex: 1 1 40%
+	}
+
+	// &__column:last-child {
+	// 	flex: 1 1 50%
+	// }
+
+	&__work-time {
+
+		/* float: left; */
+		max-width: 280px;
+		line-height: 1.0;
+		margin: 0 auto;
+		padding: 5px 0 10px 55px;
+		font-size: 15px;
+		position: relative;
+		background: url(../images/clock-icon-5.png) no-repeat 0 center;
+
+	}
+
+	&__contacts {
+		/* float: right; */
+		text-align: center;
+		padding: 2px 0 0 55px;
+		margin-top: 18px;
+		background: url(../images/icon_sprite_2.png) no-repeat 0 0;
+	}
+
+	&__phone {
+			font-family: ProximaNovaBold_4, Arial;
+			color: #333;
+			font-size: 36px;
+			text-decoration: none;
+			line-height: 1.0;
+			text-align: center;
+			padding: 2px 0 0 55px;
+			margin: 0 0 0 0;
+			background: url(../images/icon_sprite_2.png) no-repeat 0 0;
+	}
+
+	&__email {
+		float: left;
+		height: 15px;
+		color: #b28d7d;
+		font-size: 16px;
+		line-height: 1.0;
+		text-decoration: none;
+		text-align: right;
+	}
+
+	&__get-call {
+		display: inline-block;
+		height: 15px;
+		color: #b28d7d;
+		font-size: 16px;
+		line-height: 1.0;
+		text-decoration: none;
+		border-bottom: 1px dotted #b28d7d;
+		text-align: right;
+		&:hover {
+			color: #b28d7d;
+			text-decoration: none;
+			border: none;
+		}
+	}
+
+ }
+
+
+
+
