@@ -96,12 +96,14 @@ ul li {
 	position: relative;
 }
 
-.container {
+._container {
 	max-width: 1140px;
-	padding-left: 0;
-	padding-right: 0;
-	position: relative;
+	padding: 0 20px;
+	// position: relative;
 	margin: 0 auto;
+	@media screen {
+		padding: 0 10px;
+	}
 }
 
 .row {

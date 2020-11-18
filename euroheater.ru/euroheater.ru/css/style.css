@@ -83,11 +83,9 @@ ul li {
   position: relative;
 }
 
-.container {
+._container {
   max-width: 1140px;
-  padding-left: 0;
-  padding-right: 0;
-  position: relative;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -2672,5 +2670,11 @@ textarea.form-markirovka {
   .logo__img {
     max-width: 60px;
     margin: 0px 5px 0px 0px;
+  }
+}
+
+@media screen {
+  ._container {
+    padding: 0 10px;
   }
 }

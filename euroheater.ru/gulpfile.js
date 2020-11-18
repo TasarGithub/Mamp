@@ -219,7 +219,7 @@ function watchFiles() {
 
 //let build = gulp.series(clean, fonts_otf, gulp.parallel(html, css, images));
 
-let build = gulp.series(fonts_otf, gulp.parallel(html, css), fonts, gulp.parallel(fontstyle));
+let build = gulp.series(clean, fonts_otf, gulp.parallel(html, css, images), fonts, gulp.parallel(fontstyle));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 
