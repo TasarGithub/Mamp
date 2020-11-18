@@ -1,26 +1,32 @@
 @charset "UTF-8";
 
-@font-face {
-	font-family: 'ProximaNovaReg';
-	src: url('ProximaNovaReg_0.eot');
-	src: url('ProximaNovaReg_0.eot') format('embedded-opentype'),
-		url('ProximaNovaReg_0.woff2') format('woff2'),
-		url('ProximaNovaReg_0.woff') format('woff'),
-		url('ProximaNovaReg_0.ttf') format('truetype'),
-		url('ProximaNovaReg_0.svg#ProximaNovaReg_0') format('svg');
-	font-display: swap;
-}
+@import "mixins";
+@import "fonts";
 
-@font-face {
-	font-family: 'ProximaNovaBold_4';
-	src: url('ProximaNovaBold_4.eot');
-	src: url('ProximaNovaBold_4.eot') format('embedded-opentype'),
-		url('ProximaNovaBold_4.woff2') format('woff2'),
-		url('ProximaNovaBold_4.woff') format('woff'),
-		url('ProximaNovaBold_4.ttf') format('truetype'),
-		url('ProximaNovaBold_4.svg#ProximaNovaBold_4') format('svg');
-	font-display: swap;
-}
+
+// @font-face {
+// 	font-family: 'ProximaNovaReg';
+// 	src: url('ProximaNovaReg_0.eot');
+// 	src: url('ProximaNovaReg_0.eot') format('embedded-opentype'),
+// 		url('ProximaNovaReg_0.woff2') format('woff2'),
+// 		url('ProximaNovaReg_0.woff') format('woff'),
+// 		url('ProximaNovaReg_0.ttf') format('truetype'),
+// 		url('ProximaNovaReg_0.svg#ProximaNovaReg_0') format('svg');
+// 	font-display: swap;
+// }
+
+// @font-face {
+// 	font-family: 'ProximaNovaBold';
+// 	src: url('ProximaNovaBold.eot');
+// 	src: url('ProximaNovaBold.eot') format('embedded-opentype'),
+// 		url('ProximaNovaBold.woff2') format('woff2'),
+// 		url('ProximaNovaBold.woff') format('woff'),
+// 		url('ProximaNovaBold.ttf') format('truetype'),
+// 		url('ProximaNovaBold.svg#ProximaNovaBold') format('svg');
+// 	font-display: swap;
+// }
+
+@import "variables";
 
 *,
 *::before,
@@ -172,7 +178,7 @@ ul li {
 }
 
 .phone_b .phone {
-	font-family: ProximaNovaBold_4, Arial;
+	font-family: ProximaNovaBold, Arial;
 	color: #333;
 	font-size: 36px;
 	text-decoration: none;
@@ -210,7 +216,7 @@ ul li {
 }
 
 .top_menu li a {
-	font-family: ProximaNovaBold_4, Arial;
+	font-family: ProximaNovaBold, Arial;
 	color: #333;
 	font-size: 18px;
 	padding: 0;
@@ -242,7 +248,7 @@ ul li {
 }
 
 .top_menu li a {
-	font-family: ProximaNovaBold_4, Arial;
+	font-family: ProximaNovaBold, Arial;
 	color: #333;
 	font-size: 18px;
 }
@@ -252,7 +258,7 @@ ul li {
 }
 
 .h1 {
-	font-family: ProximaNovaBold_4, Arial;
+	font-family: ProximaNovaBold, Arial;
 	font-size: 39px;
 	display: inline-block;
 	padding: 0 20px;
@@ -261,7 +267,7 @@ ul li {
 }
 
 .h1 a {
-	font-family: ProximaNovaBold_4, Arial;
+	font-family: ProximaNovaBold, Arial;
 	font-size: 39px;
 	line-height: 1.0;
 	color: #181818;
@@ -466,7 +472,7 @@ ul li {
 }
 
 .news_b_1 .h3 a {
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 	font-size: 30px;
 	display: inline-block;
 	padding: 0;
@@ -493,7 +499,7 @@ ul li {
 	background: #666666;
 	text-align: left;
 	position: relative;
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 }
 
 .order_btn:hover {
@@ -547,7 +553,7 @@ ul li {
 	background: #fff;
 	text-align: left;
 	position: relative;
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 	border: 2px solid #4f5265;
 	background: url(../images/icon_sprite_2.png) no-repeat 25px -287px;
 }
@@ -728,7 +734,7 @@ ul li {
 }
 
 .b {
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 }
 
 .blue_btn_1 {
@@ -739,7 +745,7 @@ ul li {
 	padding: 10px 30px 10px 30px;
 	background: #666666;
 	position: relative;
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 }
 
 .blue_btn_1:hover {
@@ -804,7 +810,7 @@ ul li {
 	font-size: 14px;
 	text-transform: uppercase;
 	color: #666666;
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 	padding: 5px 15px;
 }
 
@@ -825,7 +831,7 @@ ul li {
 	background: #fff;
 	text-align: left;
 	position: relative;
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 	border: 2px solid #cdaea0;
 	background: url(../images/icon_sprite_2.png) no-repeat 35px -588px;
 	transition: all 0.2s ease;
@@ -839,7 +845,7 @@ ul li {
 .adv_b div {
 	width: 175px;
 	float: left;
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 	font-size: 16px;
 	line-height: 0.9;
 	text-align: center;
@@ -912,7 +918,7 @@ ul li {
 
 .modal-title {
 	font-size: 34px;
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 	line-height: 1.0;
 }
 
@@ -943,7 +949,7 @@ textarea.form-control {
 	background: #666666;
 	text-align: left;
 	position: relative;
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 	border: none;
 	float: left;
 	transition: all 0.2s ease;
@@ -982,7 +988,7 @@ textarea.form-control {
 
 h1 {
 	font-size: 40px;
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 	line-height: 1.0;
 	margin: 0;
 }
@@ -1025,7 +1031,7 @@ h1 {
 
 .power_items a {
 	font-size: 20px;
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 	display: block;
 	float: left;
 }
@@ -1094,7 +1100,7 @@ p {
 }
 
 .menu_active .m_menu li a {
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 	color: #fff;
 	font-size: 16px;
 	padding: 10px 30px;
@@ -1223,7 +1229,7 @@ p {
 	padding: 0;
 	font-size: 26px;
 	margin: 5px 0 25px 0;
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 }
 
 .date.answer_t {
@@ -1272,7 +1278,7 @@ p {
 }
 
 .submenu ul li a {
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 	font-size: 16px;
 	display: block;
 	padding: 8px 20px;
@@ -1302,7 +1308,7 @@ p {
 
 .contacts_p .phone {
 	background: url(../images/icon_sprite_2.png) no-repeat 0 0;
-	font-family: ProximaNovaBold_4, Arial;
+	font-family: ProximaNovaBold, Arial;
 	color: #333;
 	font-size: 36px;
 	text-decoration: none;
@@ -1348,7 +1354,7 @@ p {
 	background: #666666;
 	text-align: left;
 	position: relative;
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 	border: none;
 	float: left;
 	transition: all 0.2s ease;
@@ -1602,7 +1608,7 @@ img.pull-left {
 	font-size: 14px;
 	text-transform: uppercase;
 	color: #51beff;
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 	padding: 5px 15px;
 }
 
@@ -1612,7 +1618,7 @@ img.pull-left {
 	font-size: 14px;
 	text-transform: uppercase;
 	color: #b28d7d;
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 	padding: 5px 15px;
 	text-decoration: none;
 }
@@ -1704,7 +1710,7 @@ img.pull-left {
 	background: #666666;
 	text-align: center;
 	position: relative;
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 	border: none;
 	white-space: normal;
 }
@@ -1808,7 +1814,7 @@ img.pull-left {
 }
 
 .catalog-page-left-col-menu-wr>li>a {
-	font-family: ProximaNovaBold_4, Arial;
+	font-family: ProximaNovaBold, Arial;
 	color: #b28d7d;
 	font-size: 18px;
 	line-height: 1.0;
@@ -1836,7 +1842,7 @@ img.pull-left {
 
 .catalog-page-left-col-menu-wr ul li a.active {
 	color: #181818;
-	font-family: ProximaNovaBold_4, Arial;
+	font-family: ProximaNovaBold, Arial;
 	text-decoration: none !important;
 }
 
@@ -1995,7 +2001,7 @@ img.pull-left {
 }
 
 .slider-bg-2 h3 {
-	font-family: ProximaNovaBold_4, Arial;
+	font-family: ProximaNovaBold, Arial;
 	color: #181818;
 	font-size: 16px;
 	min-height: 52px;
@@ -2022,7 +2028,7 @@ img.pull-left {
 	position: relative;
 	border: 0;
 	border-right: 1px solid #e0cfc0;
-	font-family: ProximaNovaBold_4, Arial;
+	font-family: ProximaNovaBold, Arial;
 	margin-left: 25px;
 	border-radius: 50px;
 	color: #fff;
@@ -2318,7 +2324,7 @@ margin-bottom: 3%; */
 }
 
 .h2_2 {
-	font-family: ProximaNovaBold_4, Arial;
+	font-family: ProximaNovaBold, Arial;
 	font-size: 33px;
 	display: inline-block;
 	padding: 0 20px;
@@ -2332,7 +2338,7 @@ margin-bottom: 3%; */
 	padding: 0;
 	font-size: 26px;
 	margin: 5px 0 25px 0;
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 }
 
 .h4_padding-left {
@@ -2341,7 +2347,7 @@ margin-bottom: 3%; */
 	padding-left: 4%;
 	font-size: 26px;
 	margin: 5px 0 30px 0;
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 }
 
 .h4_float-left {
@@ -2350,7 +2356,7 @@ margin-bottom: 3%; */
 	padding-left: 0;
 	font-size: 26px;
 	margin: 5px 0 25px 0;
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 	float: left;
 }
 
@@ -2358,7 +2364,7 @@ margin-bottom: 3%; */
 	display: block;
 	text-align: left;
 	font-size: 26px;
-	font-family: ProximaNovaBold_4;
+	font-family: ProximaNovaBold;
 	/*width: 100%; */
 	padding: 10px;
 	background: #ffd0d0;
@@ -2431,7 +2437,7 @@ textarea.form-markirovka {
 }
 
 .button-in h3 {
-	font-family: ProximaNovaBold_4, Arial;
+	font-family: ProximaNovaBold, Arial;
 	color: #181818;
 	font-size: 16px;
 	min-height: 52px;
@@ -2459,7 +2465,7 @@ textarea.form-markirovka {
 	position: relative;
 	border: 0;
 	border-right: 1px solid #e0cfc0;
-	font-family: ProximaNovaBold_4, Arial;
+	font-family: ProximaNovaBold, Arial;
 	margin-left: 0px;
 	border-radius: 50px;
 	color: #fff;

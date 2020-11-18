@@ -33,7 +33,7 @@ let path = {
 		html: project_name + "/",
 		js: project_name + "/js/",
 		css: project_name + "/css/",
-		images: project_name + "/img/",
+		images: project_name + "/images/",
 		fonts: project_name + "/fonts/"
 	},
 	src: {
@@ -65,7 +65,7 @@ function html() {
 	return src(path.src.html, {})
 		.pipe(plumber())
 		.pipe(fileinclude())
-		.pipe(webphtml())
+		// .pipe(webphtml())   // вызывает ошибку при появлении в названи картинки - _
 		.pipe(dest(path.build.html))
 		.pipe(browsersync.stream());
 }
@@ -89,12 +89,14 @@ function css() {
 				cascade: true
 			})
 		)
+		
 		.pipe(webpcss(
 			{
 				webpClass: "._webp",
-				noWebpClass: "._no-webp"
+				noWebpClass: "._no-webp" 
 			}
 		))
+		.pipe(browsersync.stream())
 */
 		.pipe(dest(path.build.css))
 		.pipe(clean_css())
@@ -167,7 +169,7 @@ function fonts_otf() {
 		}))
 		.pipe(gulp.dest('./' + src_folder + +'/fonts/'));
 }
-/*
+
 function fonts() {
 	src(path.src.fonts)
 		.pipe(plumber())
@@ -194,10 +196,10 @@ function fontstyle() {
 					c_fontname = fontname;
 				}
 			}
-		})
+		});
 	}
 }
-*/
+
 function cb() { }
 function clean() {
 	return del(path.clean);
@@ -206,19 +208,30 @@ function watchFiles() {
 	gulp.watch([path.watch.html], html);
 	gulp.watch([path.watch.css], css);
 	//gulp.watch([path.watch.js], js);
-	// gulp.watch([path.watch.images], images);
+	gulp.watch([path.watch.images], images);
 }
-let build = gulp.series(clean, gulp.parallel(html, css));
+
+// let build = gulp.series(clean, fonts_otf, gulp.parallel(html, css, js, favicon, images), fonts, gulp.parallel(fontstyle));
+// let watch = gulp.parallel(build, watchFiles, browserSync);
+
+// let build = gulp.series(clean, gulp.parallel(html, css));
+// let watch = gulp.parallel(build, watchFiles, browserSync);
+
+//let build = gulp.series(clean, fonts_otf, gulp.parallel(html, css, images));
+
+let build = gulp.series(fonts_otf, gulp.parallel(html, css), fonts, gulp.parallel(fontstyle));
 let watch = gulp.parallel(build, watchFiles, browserSync);
+
+
 
 exports.html = html;
 exports.css = css;
 // exports.js = js;
 // exports.favicon = favicon;
-// exports.fonts_otf = fonts_otf;
-// exports.fontstyle = fontstyle;
-// exports.fonts = fonts;
-// exports.images = images;
+exports.fonts_otf = fonts_otf;
+exports.fontstyle = fontstyle;
+exports.fonts = fonts;
+exports.images = images;
 exports.clean = clean;
 exports.build = build;
 exports.watch = watch;
