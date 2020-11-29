@@ -6,8 +6,9 @@
 
 let burgerClass = document.querySelector(".burger"),
   menuClass = document.querySelector(".menu"),
-  menuList = document.querySelector(".menu__list");
-body = document.querySelector("body");
+  menuList = document.querySelector(".menu__list"),
+  body = document.querySelector("body"),
+  headerMenu = document.querySelector(".header__menu");
 // activeClass=document.querySelector(".;
 console.log("burger: ", burgerClass);
 
@@ -15,5 +16,6 @@ burgerClass.addEventListener("click", function (e) {
   burgerClass.classList.toggle("_active");
   menuClass.classList.toggle("_active");
   menuList.classList.toggle("_active");
+  headerMenu.classList.toggle("_active");
   body.classList.toggle("_lock");
 });

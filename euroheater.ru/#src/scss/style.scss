@@ -16,7 +16,7 @@
 //</»коночные шрифты>==========================================================================================
 
 //<Ўрифт по умолчанию>==========================================================================================
-$fontFamily: "";
+$fontFamily: "ProximaNova", Arial, sans-serif;
 //</Ўрифт по умолчанию>==========================================================================================
 
 //</Ў–»‘“џ>=======================================================================================================
@@ -236,7 +236,8 @@ body {
 }
 
 .h1 {
-  font-family: ProximaNovaBold, Arial;
+  //font-family: ProximaNovaBold, Arial
+  font-weight: 700;
   font-size: 39px;
   display: inline-block;
   padding: 0 20px;
@@ -245,7 +246,8 @@ body {
 }
 
 .h1 a {
-  font-family: ProximaNovaBold, Arial;
+  //font-family: ProximaNovaBold, Arial
+  font-weight: 700;
   font-size: 39px;
   line-height: 1;
   color: #181818;
@@ -1286,7 +1288,8 @@ p {
 
 .contacts_p .phone {
   background: url(../images/icon_sprite_2.png) no-repeat 0 0;
-  font-family: ProximaNovaBold, Arial;
+  //font-family: ProximaNovaBold, Arial
+  font-weight: 700;
   color: #333;
   font-size: 36px;
   text-decoration: none;
@@ -1779,7 +1782,8 @@ img.pull-left {
 
 .catalog-page-left-col-menu-wr--2 > li > a {
   font-size: 15px !important;
-  font-family: ProximaNovaReg !important;
+  //font-family: ProximaNovaReg;
+  font-weight: 400;
 }
 
 .catalog-page-left-col-menu-wr li {
@@ -1792,7 +1796,8 @@ img.pull-left {
 }
 
 .catalog-page-left-col-menu-wr > li > a {
-  font-family: ProximaNovaBold, Arial;
+  //font-family: ProximaNovaBold, Arial
+  font-weight: 700;
   color: #b28d7d;
   font-size: 18px;
   line-height: 1;
@@ -1820,7 +1825,8 @@ img.pull-left {
 
 .catalog-page-left-col-menu-wr ul li a.active {
   color: #181818;
-  font-family: ProximaNovaBold, Arial;
+  //font-family: ProximaNovaBold, Arial
+  font-weight: 700;
   text-decoration: none !important;
 }
 
@@ -1979,7 +1985,8 @@ img.pull-left {
 }
 
 .slider-bg-2 h3 {
-  font-family: ProximaNovaBold, Arial;
+  //font-family: ProximaNovaBold, Arial
+  font-weight: 700;
   color: #181818;
   font-size: 16px;
   min-height: 52px;
@@ -2006,7 +2013,8 @@ img.pull-left {
   position: relative;
   border: 0;
   border-right: 1px solid #e0cfc0;
-  font-family: ProximaNovaBold, Arial;
+  //font-family: ProximaNovaBold, Arial
+  font-weight: 700;
   margin-left: 25px;
   border-radius: 50px;
   color: #fff;
@@ -2038,7 +2046,8 @@ img.pull-left {
   font-weight: normal;
   font-size: 15px;
   line-height: 1;
-  font-family: ProximaNovaReg;
+  //font-family: ProximaNovaReg
+  font-weight: 400;
   text-align: left;
   color: #ffffff;
   position: absolute;
@@ -2289,7 +2298,8 @@ margin-bottom: 3%; */
 }
 
 .h2_2 {
-  font-family: ProximaNovaBold, Arial;
+  //font-family: ProximaNovaBold, Arial
+  font-weight: 700;
   font-size: 33px;
   display: inline-block;
   padding: 0 20px;
@@ -2374,12 +2384,14 @@ textarea.form-markirovka {
 /*конец дл€ стр аналогов*/
 
 .span_arial {
-  font-family: ProximaNovaReg, helvetica, sans-serif;
+  //font-family: ProximaNovaReg
+  font-weight: 400;
   font-size: 120%;
 }
 
 .ul_arial {
-  font-family: ProximaNovaReg, helvetica, sans-serif;
+  //font-family: ProximaNovaReg
+  font-weight: 400;
   font-size: 120%;
 }
 
@@ -2398,7 +2410,8 @@ textarea.form-markirovka {
 }
 
 .button-in h3 {
-  font-family: ProximaNovaBold, Arial;
+  //font-family: ProximaNovaBold, Arial
+  font-weight: 700;
   color: #181818;
   font-size: 16px;
   min-height: 52px;
@@ -2425,7 +2438,8 @@ textarea.form-markirovka {
   position: relative;
   border: 0;
   border-right: 1px solid #e0cfc0;
-  font-family: ProximaNovaBold, Arial;
+  //font-family: ProximaNovaBold, Arial
+  font-weight: 700;
   margin-left: 0px;
   border-radius: 50px;
   color: #fff;

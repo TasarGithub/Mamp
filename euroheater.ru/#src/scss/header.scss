@@ -148,23 +148,23 @@
     }
     @media (max-width: $md3+px) {
       margin: 0 10px 0 0;
-      min-height: 63px;
+      min-height: 65px;
     }
     @media (max-width: 580px) {
-      min-height: 52px;
+      min-height: 55px;
     }
     @media (max-width: $md4+px) {
       min-height: 50px;
     }
     @media (max-width: $md5+px) {
-      min-height: 42px;
+      min-height: 40px;
     }
   }
 
   &__phone {
-    font-family: ProximaNovaBold, Arial;
     color: #333;
     font-size: 35px;
+    font-weight: 700;
     text-decoration: none;
     line-height: 1;
     padding: 0px 0 0px 41px;
@@ -309,3 +309,13 @@
 // 	background: url(../images/clock-icon-5.png) no-repeat 0 center;
 
 // }
+@media (max-width: $md4+px) {
+  .header {
+    &__container {
+      padding: 0;
+    }
+    &__content {
+      padding: 0;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: "ProximaNovaBold";
+  font-family: "ProximaNova";
   font-display: swap;
   src: url("../fonts/ProximaNovaBold_4.woff") format("woff"), url("../fonts/ProximaNovaBold_4.woff2") format("woff2");
   font-weight: 700;
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: "ProximaNovaReg";
+  font-family: "ProximaNova";
   font-display: swap;
   src: url("../fonts/ProximaNovaReg_0.woff") format("woff"), url("../fonts/ProximaNovaReg_0.woff2") format("woff2");
   font-weight: 400;
@@ -56,7 +56,7 @@ body {
 
 body {
   line-height: 1;
-  font-family: "";
+  font-family: "ProximaNova", Arial, sans-serif;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -65,7 +65,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "";
+  font-family: "ProximaNova", Arial, sans-serif;
 }
 
 input::-ms-clear {
@@ -109,29 +109,15 @@ h6 {
 }
 
 a {
-  font: 15px ProximaNovaReg, Arial, Tahoma, sans-serif;
   color: #b28d7d;
-  text-decoration: none;
-  outline: none !important;
 }
 
 a:hover {
-  text-decoration: underline;
   color: #b28d7d;
-}
-
-body,
-table,
-td,
-div {
-  color: #181818;
-  font: 15px ProximaNovaReg, Arial, Tahoma, sans-serif;
-  line-height: 1;
 }
 
 body.modal-open {
   overflow: auto;
-  padding-right: 0 !important;
 }
 
 body {
@@ -974,9 +960,9 @@ body.ie ._ibg img {
 }
 
 .header__phone {
-  font-family: ProximaNovaBold, Arial;
   color: #333;
   font-size: 35px;
+  font-weight: 700;
   text-decoration: none;
   line-height: 1;
   padding: 0px 0 0px 41px;
@@ -1046,7 +1032,7 @@ body.ie ._ibg img {
   top: 0px;
   left: 0;
   padding: 60px 0 0 0;
-  width: 100%;
+  width: 80%;
   height: 100%;
   display: block;
   background-color: #ebebeb;
@@ -1064,7 +1050,7 @@ body.ie ._ibg img {
 
 .menu__link {
   height: 56px;
-  font-family: ProximaNovaBold, Arial;
+  font-weight: 700;
   color: #333;
   font-size: 18px;
   flex: 1;
@@ -1090,7 +1076,7 @@ body.ie ._ibg img {
   width: 28px;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0px 25px 0 0;
+  margin: 0px 10px 0 0;
   z-index: 5;
 }
 
@@ -1162,7 +1148,7 @@ body._lock {
 }
 
 .h1 {
-  font-family: ProximaNovaBold, Arial;
+  font-weight: 700;
   font-size: 39px;
   display: inline-block;
   padding: 0 20px;
@@ -1171,7 +1157,7 @@ body._lock {
 }
 
 .h1 a {
-  font-family: ProximaNovaBold, Arial;
+  font-weight: 700;
   font-size: 39px;
   line-height: 1;
   color: #181818;
@@ -2210,7 +2196,7 @@ p {
 
 .contacts_p .phone {
   background: url(../images/icon_sprite_2.png) no-repeat 0 0;
-  font-family: ProximaNovaBold, Arial;
+  font-weight: 700;
   color: #333;
   font-size: 36px;
   text-decoration: none;
@@ -2701,7 +2687,7 @@ img.pull-left {
 
 .catalog-page-left-col-menu-wr--2 > li > a {
   font-size: 15px !important;
-  font-family: ProximaNovaReg !important;
+  font-weight: 400;
 }
 
 .catalog-page-left-col-menu-wr li {
@@ -2714,7 +2700,7 @@ img.pull-left {
 }
 
 .catalog-page-left-col-menu-wr > li > a {
-  font-family: ProximaNovaBold, Arial;
+  font-weight: 700;
   color: #b28d7d;
   font-size: 18px;
   line-height: 1;
@@ -2742,7 +2728,7 @@ img.pull-left {
 
 .catalog-page-left-col-menu-wr ul li a.active {
   color: #181818;
-  font-family: ProximaNovaBold, Arial;
+  font-weight: 700;
   text-decoration: none !important;
 }
 
@@ -2901,7 +2887,7 @@ img.pull-left {
 }
 
 .slider-bg-2 h3 {
-  font-family: ProximaNovaBold, Arial;
+  font-weight: 700;
   color: #181818;
   font-size: 16px;
   min-height: 52px;
@@ -2928,7 +2914,7 @@ img.pull-left {
   position: relative;
   border: 0;
   border-right: 1px solid #e0cfc0;
-  font-family: ProximaNovaBold, Arial;
+  font-weight: 700;
   margin-left: 25px;
   border-radius: 50px;
   color: #fff;
@@ -2960,7 +2946,7 @@ img.pull-left {
   font-weight: normal;
   font-size: 15px;
   line-height: 1;
-  font-family: ProximaNovaReg;
+  font-weight: 400;
   text-align: left;
   color: #ffffff;
   position: absolute;
@@ -3206,7 +3192,7 @@ margin-bottom: 3%; */
 }
 
 .h2_2 {
-  font-family: ProximaNovaBold, Arial;
+  font-weight: 700;
   font-size: 33px;
   display: inline-block;
   padding: 0 20px;
@@ -3291,12 +3277,12 @@ textarea.form-markirovka {
 /*����� ��� ��� ��������*/
 
 .span_arial {
-  font-family: ProximaNovaReg, helvetica, sans-serif;
+  font-weight: 400;
   font-size: 120%;
 }
 
 .ul_arial {
-  font-family: ProximaNovaReg, helvetica, sans-serif;
+  font-weight: 400;
   font-size: 120%;
 }
 
@@ -3316,7 +3302,7 @@ textarea.form-markirovka {
 }
 
 .button-in h3 {
-  font-family: ProximaNovaBold, Arial;
+  font-weight: 700;
   color: #181818;
   font-size: 16px;
   min-height: 52px;
@@ -3343,7 +3329,7 @@ textarea.form-markirovka {
   position: relative;
   border: 0;
   border-right: 1px solid #e0cfc0;
-  font-family: ProximaNovaBold, Arial;
+  font-weight: 700;
   margin-left: 0px;
   border-radius: 50px;
   color: #fff;
@@ -3528,11 +3514,20 @@ textarea.form-markirovka {
 
   .header__contacts {
     margin: 0 10px 0 0;
-    min-height: 63px;
+    min-height: 65px;
   }
 
   .header__menu {
     padding: 84px 0 0 0;
+  }
+
+  .menu__list {
+    margin: 0 10px 0 0;
+  }
+
+  .menu__list._active {
+    margin: 0 10px 0 0;
+    padding: 85px 0 0px 0px;
   }
 
   .menu__list._active li {
@@ -3571,7 +3566,7 @@ textarea.form-markirovka {
 
 @media (max-width: 580px) {
   .header__contacts {
-    min-height: 52px;
+    min-height: 55px;
   }
 
   .header__phone {
@@ -3582,6 +3577,10 @@ textarea.form-markirovka {
   .header__email {
     font-size: 17px;
     padding: 0px 0 0px 30px;
+  }
+
+  .menu__list._active {
+    padding: 75px 0 0px 0px;
   }
 }
 
@@ -3616,8 +3615,20 @@ textarea.form-markirovka {
     font-size: 13px;
   }
 
+  .header__container {
+    padding: 0;
+  }
+
+  .header__content {
+    padding: 0;
+  }
+
   .header__menu {
     padding: 74px 0 0 0;
+  }
+
+  .menu__list._active {
+    padding: 70px 0 0px 0px;
   }
 
   .menu__list._active li:nth-child(5) {
@@ -3638,11 +3649,15 @@ textarea.form-markirovka {
 
 @media (max-width: 399.98px) {
   .header__contacts {
-    min-height: 42px;
+    min-height: 40px;
   }
 
   .header__menu {
     padding: 60px 0 0 0;
+  }
+
+  .menu__list._active {
+    padding: 60px 0 0px 0px;
   }
 
   .menu__list li:nth-child(4) {
