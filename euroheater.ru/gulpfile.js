@@ -65,14 +65,12 @@ function browserSync(done) {
   });
 }
 function html() {
-  return (
-    src(path.src.html, {})
-      .pipe(plumber())
-      .pipe(fileinclude())
-      // .pipe(webphtml())   // вызывает ошибку при появлении в названи картинки - _
-      .pipe(dest(path.build.html))
-      .pipe(browsersync.stream())
-  );
+  return src(path.src.html, {})
+    .pipe(plumber())
+    .pipe(fileinclude())
+    .pipe(webphtml()) // вызывает ошибку при появлении в названи картинки - _
+    .pipe(dest(path.build.html))
+    .pipe(browsersync.stream());
 }
 function css() {
   return (
@@ -95,15 +93,15 @@ function css() {
 				cascade: true
 			})
 		)
-		
-		.pipe(webpcss(
-			{
-				webpClass: "._webp",
-				noWebpClass: "._no-webp" 
-			}
-		))
-		.pipe(browsersync.stream())
-*/
+	*/
+      .pipe(
+        webpcss({
+          webpClass: "._webp",
+          noWebpClass: "._no-webp",
+        })
+      )
+      .pipe(browsersync.stream())
+
       .pipe(dest(path.build.css))
       .pipe(clean_css())
       .pipe(
@@ -131,32 +129,34 @@ function js() {
     .pipe(browsersync.stream());
 }
 function images() {
-  return src(path.src.images)
-    .pipe(newer(path.build.images))
-    .pipe(
-      imagemin([
-        webp({
-          quality: 75,
-        }),
-      ])
-    )
-    .pipe(
-      rename({
-        extname: ".webp",
-      })
-    )
-    .pipe(dest(path.build.images))
-    .pipe(src(path.src.images))
-    .pipe(newer(path.build.images))
-    .pipe(
-      imagemin({
-        progressive: true,
-        svgoPlugins: [{ removeViewBox: false }],
-        interlaced: true,
-        optimizationLevel: 3, // 0 to 7
-      })
-    )
-    .pipe(dest(path.build.images));
+  return (
+    src(path.src.images)
+      .pipe(newer(path.build.images))
+      // .pipe(
+      //   imagemin([
+      //     webp({
+      //       quality: 75,
+      //     }),
+      //   ])
+      // )
+      // .pipe(
+      //   rename({
+      //     extname: ".webp",
+      //   })
+      // )
+      .pipe(dest(path.build.images))
+      .pipe(src(path.src.images))
+      .pipe(newer(path.build.images))
+      // .pipe(
+      //   imagemin({
+      //     progressive: true,
+      //     svgoPlugins: [{ removeViewBox: false }],
+      //     interlaced: true,
+      //     optimizationLevel: 3, // 0 to 7
+      //   })
+      // )
+      .pipe(dest(path.build.images))
+  );
 }
 function favicon() {
   return src(path.src.favicon)
@@ -247,7 +247,7 @@ let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.html = html;
 exports.css = css;
-// exports.js = js;
+exports.js = js;
 // exports.favicon = favicon;
 exports.fonts_otf = fonts_otf;
 exports.fontstyle = fontstyle;
