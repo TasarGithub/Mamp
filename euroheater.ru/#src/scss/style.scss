@@ -2687,16 +2687,17 @@ textarea.form-markirovka {
 @import "usage";
 @import "popup";
 @import "footer";
+@import "my_ui";
 
 .title {
   font-weight: bold;
 }
 
-.ancor {
-  position: relative;
-
-  &__link {
-    position: absolute;
-    top: -244px;
+.ancor__link {
+  &::before {
+    display: block;
+    content: "";
+    height: 164px;
+    margin: -164px 0 0 0;
   }
 }

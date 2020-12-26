@@ -3457,6 +3457,10 @@ body._lock {
   padding: 140px 0 50px 0;
 }
 
+.page *:last-child {
+  margin-bottom: 0;
+}
+
 .top-home {
   width: 100%;
 }
@@ -3466,15 +3470,12 @@ body._lock {
   position: relative;
   z-index: 3;
   height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.top-home__wrapper {
+.top-home__row {
   display: flex;
   justify-content: flex-start;
-  margin: -200px 0px 0px 0px;
+  margin: 0px 0px 30px 0px;
 }
 
 .top-home__column {
@@ -3494,15 +3495,6 @@ body._lock {
   margin: 0 auto;
 }
 
-.top-home__header::before {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  height: 99.5%;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
 .top-home__title {
   position: relative;
   top: 0;
@@ -3512,22 +3504,34 @@ body._lock {
 }
 
 .top-home__list {
+  width: 70%;
+  margin: 15px 0px 0px auto;
+}
+
+.top-home__link {
+  border-bottom: 1px dashed #fff;
+}
+
+.top-home__item {
   font-size: 28px;
   font-weight: bold;
   color: #fff;
-  width: 70%;
-  margin: 0px 0px 0px auto;
-}
-
-.top-home__list li {
   display: inline-block;
   background: rgba(100, 100, 100, 0.95);
   margin: 0px 0px 20px 0px;
   padding: 10px 20px;
 }
 
-.top-home__link {
-  border-bottom: 1px dashed #fff;
+.top-home__item--inversion {
+  color: #323232;
+  background-color: #fff;
+  flex: 0 1 45%;
+  min-height: 160px;
+  height: 100%;
+}
+
+.top-home__item--inversion > .top-home__link {
+  border-bottom: 1px dashed rgba(100, 100, 100, 0.95);
 }
 
 .home a {
@@ -3543,10 +3547,6 @@ body._lock {
   font-size: 40px;
   max-width: 550px;
   background: #666666 url(../images/icon_sprite_2.webp) no-repeat 31px -1481px;
-}
-
-.home__bottom {
-  margin: 0px -20px;
 }
 
 .home__cards {
@@ -3634,6 +3634,28 @@ body._lock {
   display: inline;
   line-height: 200%;
   background: rgba(100, 100, 100, 0.95);
+}
+
+.home__bottom {
+  padding: 30px 0 0 0;
+}
+
+.bottom-home__text-object {
+  margin: 0px 0px 30px 0px;
+  font-size: 30px;
+  text-align: left;
+}
+
+.bottom-home__text-services {
+  font-size: 30px;
+  text-align: left;
+}
+
+.bottom-home__hr {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  margin: 0px 0px 30px 0px;
 }
 
 .advantages__list {
@@ -3857,17 +3879,19 @@ body._lock {
   margin: 0px 0 0px auto;
 }
 
+._sb {
+  justify-content: space-between;
+}
+
 .title {
   font-weight: bold;
 }
 
-.ancor {
-  position: relative;
-}
-
-.ancor__link {
-  position: absolute;
-  top: -244px;
+.ancor__link::before {
+  display: block;
+  content: "";
+  height: 164px;
+  margin: -164px 0 0 0;
 }
 
 @media (min-width: 991.98px) {
