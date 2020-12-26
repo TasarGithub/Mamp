@@ -132,15 +132,17 @@
     display: inline-block;
     background: rgba(100, 100, 100, 0.95); //$primary;
     margin: 0px 0px 20px 0px;
-    padding: 10px 20px;
+    padding: 10px 20px 15px;
   }
   // .top-home
   &__item--inversion {
     color: rgb(50, 50, 50);
     background-color: #fff;
-    flex: 0 1 45%;
-    min-height: 160px;
+    max-width: 550px;
+    flex: 0 1 50%;
+    // min-height: 160px;
     height: 100%;
+    font-size: 30px;
     & > .top-home__link {
       border-bottom: 1px dashed $bg-title;
     }
@@ -188,6 +190,8 @@
     font-size: 40px;
     max-width: 550px;
     background: #666666 url(../images/icon_sprite_2.webp) no-repeat 31px -1481px;
+    border-radius: 0;
+    text-transform: none;
     // @media (max-width: $md2+px) {
     //   font-size: 20px;
     // }

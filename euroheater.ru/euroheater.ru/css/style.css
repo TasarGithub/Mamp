@@ -3519,15 +3519,16 @@ body._lock {
   display: inline-block;
   background: rgba(100, 100, 100, 0.95);
   margin: 0px 0px 20px 0px;
-  padding: 10px 20px;
+  padding: 10px 20px 15px;
 }
 
 .top-home__item--inversion {
   color: #323232;
   background-color: #fff;
-  flex: 0 1 45%;
-  min-height: 160px;
+  max-width: 550px;
+  flex: 0 1 50%;
   height: 100%;
+  font-size: 30px;
 }
 
 .top-home__item--inversion > .top-home__link {
@@ -3547,6 +3548,8 @@ body._lock {
   font-size: 40px;
   max-width: 550px;
   background: #666666 url(../images/icon_sprite_2.webp) no-repeat 31px -1481px;
+  border-radius: 0;
+  text-transform: none;
 }
 
 .home__cards {
