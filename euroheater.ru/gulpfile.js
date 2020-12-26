@@ -129,34 +129,32 @@ function js() {
     .pipe(browsersync.stream());
 }
 function images() {
-  return (
-    src(path.src.images)
-      .pipe(newer(path.build.images))
-      // .pipe(
-      //   imagemin([
-      //     webp({
-      //       quality: 75,
-      //     }),
-      //   ])
-      // )
-      // .pipe(
-      //   rename({
-      //     extname: ".webp",
-      //   })
-      // )
-      .pipe(dest(path.build.images))
-      .pipe(src(path.src.images))
-      .pipe(newer(path.build.images))
-      // .pipe(
-      //   imagemin({
-      //     progressive: true,
-      //     svgoPlugins: [{ removeViewBox: false }],
-      //     interlaced: true,
-      //     optimizationLevel: 3, // 0 to 7
-      //   })
-      // )
-      .pipe(dest(path.build.images))
-  );
+  return src(path.src.images)
+    .pipe(newer(path.build.images))
+    .pipe(
+      imagemin([
+        webp({
+          quality: 75,
+        }),
+      ])
+    )
+    .pipe(
+      rename({
+        extname: ".webp",
+      })
+    )
+    .pipe(dest(path.build.images))
+    .pipe(src(path.src.images))
+    .pipe(newer(path.build.images))
+    .pipe(
+      imagemin({
+        progressive: true,
+        svgoPlugins: [{ removeViewBox: false }],
+        interlaced: true,
+        optimizationLevel: 3, // 0 to 7
+      })
+    )
+    .pipe(dest(path.build.images));
 }
 function favicon() {
   return src(path.src.favicon)

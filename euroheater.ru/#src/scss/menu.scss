@@ -2,6 +2,9 @@
   background: #ebebeb;
   position: relative;
   padding: 84px 0 0 0;
+  & > ._container {
+    margin: 0 auto;
+  }
   @media (max-width: $md2+px) {
     padding: 84px 0 0 0;
   }

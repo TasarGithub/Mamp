@@ -13,7 +13,7 @@
   // padding: 0 0 0 70px;
   // margin: 20px 0 0 0;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
   color: #333;
   font-size: 15px;
@@ -42,8 +42,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @media screen and (max-width: 768px) {
+    @media (max-width: 660px) {
       display: none;
     }
   }
@@ -62,7 +61,9 @@
   top: 0;
   z-index: 1000;
   // }
-
+  &__container {
+    margin: 0 auto;
+  }
   &__top-wrapper {
     width: 100%;
     position: fixed;
@@ -86,9 +87,9 @@
     // @media screen and ( max-width: 450px){
     // 	padding: 0 10px;
     // }
-    @media (max-width: $md3+px) {
-      padding: 0 10px;
-    }
+    // @media (max-width: $md3+px) {
+    //   padding: 0 10px;
+    // }
   }
 
   &__column {
@@ -213,16 +214,13 @@
 
   &__email {
     // float: left;
-    display: flex;
-    align-items: center;
-
-    margin: 0 auto; // 0 0;
+    // display: flex;
+    // align-items: center;
 
     color: $dark;
-    font-weight: 600;
+
     font-size: 26px;
-    line-height: 1;
-    text-decoration: none;
+
     // padding: 6px 0 6px 35px;
     padding: 0px 0 0px 35px;
 
@@ -272,7 +270,7 @@
     font-size: 16px;
     line-height: 1;
     text-decoration: none;
-    border-bottom: 1px dotted $primary-dark;
+    // border-bottom: 1px dotted $primary-dark;
     background-color: $primary;
     margin: 0 0 0 auto;
     color: $light;
@@ -309,13 +307,12 @@
 // 	background: url(../images/clock-icon-5.png) no-repeat 0 center;
 
 // }
-@media (max-width: $md4+px) {
-  .header {
-    &__container {
-      padding: 0;
-    }
-    &__content {
-      padding: 0;
-    }
-  }
-}
+// @media (max-width: $md4+px) {
+//   .header {
+//     &__container {
+//       padding: 0;
+//     }
+//     &__content {
+//       padding: 0;
+//     }
+//   }
